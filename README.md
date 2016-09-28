@@ -3,6 +3,8 @@
 ## Development
 Above all else, no two people should ever be working on the same scene at the same time. This causes the nastiest of conflicts which are pretty much impossible to resolve without throwing out someone's work. To prevent this, each of us should have our own test scene which will only be edited by that person. Anyone making changes to the actual level scene(s) should let everyone else know first to prevent conflicts.
 
+The master branch should always reflect a working state of the game. Any commits should instead be made to develop. When develop is in a working state that is better than the current state of master, we'll pull it in to master. Since this is a very short-term project where we'll probably only get an even somewhat working build of the game towards the end of development this isn't super important, but its just good practice.
+
 ## Design
 ### Description
 2-player game in which one player uses the VR headset and gamepad to navigate a dungeon and the other player uses the keyboard, mouse, and monitor to view and manipulate the dungeon from a top-down view.
