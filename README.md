@@ -1,7 +1,7 @@
 # VR Project
 
 ## Development
-Above all else, no 2 people should ever be working on the same scene at the same time. This causes the nastiest of conflicts which are pretty much impossible to resolve without throwing out someone's work. To prevent this, each of us should have our own test scene which will only be edited by that person. Anyone making changes to the actual level scene(s) should let everyone else know first to prevent conflicts.
+Above all else, no two people should ever be working on the same scene at the same time. This causes the nastiest of conflicts which are pretty much impossible to resolve without throwing out someone's work. To prevent this, each of us should have our own test scene which will only be edited by that person. Anyone making changes to the actual level scene(s) should let everyone else know first to prevent conflicts.
 
 ## Design
 ### Description
