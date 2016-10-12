@@ -1,6 +1,8 @@
 # VR Project
 
 ## Development
+When cloning the project, do it with "git clone --recursive https://github.com/branderson/VR-Project". This is necessary because the project contains a git submodule which will otherwise remain as an empty folder when cloned. If your version of the project directory has an empty folder for "Assets/Scripts/Utility", run the command "git submodule update --init --recursive". The Utility submodule is actively under development because I use it across several different projects, so it's a good idea to run git submodule update every now and then to make sure you're using the newest version, since it does not update with a git pull. This is especially true if something stops working related to something in the Assets.Utility namespace.
+
 Above all else, no two people should ever be working on the same scene at the same time. This causes the nastiest of conflicts which are pretty much impossible to resolve without throwing out someone's work. To prevent this, each of us should have our own test scene which will only be edited by that person. Anyone making changes to the actual level scene(s) should let everyone else know first to prevent conflicts.
 
 The master branch should always reflect a working state of the game. Any commits should instead be made to develop. When develop is in a working state that is better than the current state of master, we'll pull it in to master. Since this is a very short-term project where we'll probably only get an even somewhat working build of the game towards the end of development this isn't super important, but its just good practice.
