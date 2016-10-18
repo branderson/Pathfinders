@@ -1,3 +1,6 @@
 [submodule "Assets/Scripts/Utility"]
 	path = Assets/Scripts/Utility
 	url = https://github.com/branderson/UnityUtility
+[submodule "Assets/Scripts/TiledLoader"]
+	path = Assets/Scripts/TiledLoader
+	url = https://github.com/branderson/TiledLoader
