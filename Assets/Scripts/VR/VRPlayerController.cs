@@ -11,11 +11,13 @@ namespace Assets.VR
 
 	    private Transform _cameraTransform;
 	    private Camera _camera;
+	    private CharacterController _controller;
 
 	    private void Awake()
 	    {
 	        _camera = GetComponentInChildren<Camera>();
 	        _cameraTransform = _camera.transform;
+	        _controller = GetComponent<CharacterController>();
 	    }
 
 	    private void Update()
@@ -31,8 +33,10 @@ namespace Assets.VR
             // Rotate movement vector by VR camera's y rotation
             Vector3 move = new Vector3(hor, 0, ver);
 	        move = Quaternion.Euler(0, _cameraTransform.localRotation.eulerAngles.y, 0) * move;
+	        move.y = 0;
 
-            transform.AdjustLocalPosition(_moveSpeed*move.x*Time.deltaTime, 0, _moveSpeed*move.z*Time.deltaTime);
+//            transform.AdjustLocalPosition(_moveSpeed*move.x*Time.deltaTime, 0, _moveSpeed*move.z*Time.deltaTime);
+	        _controller.SimpleMove(move*_moveSpeed);
 	    }
 	}
 } 
