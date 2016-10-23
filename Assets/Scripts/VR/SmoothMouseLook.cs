@@ -9,6 +9,7 @@ namespace Assets.VR
         public RotationAxes axes = RotationAxes.MouseXAndY;
         public float sensitivityX = 15F;
         public float sensitivityY = 15F;
+        private bool _useGamepadControls = false;
  
         public float minimumX = -360F;
         public float maximumX = 360F;
@@ -28,6 +29,14 @@ namespace Assets.VR
         private float frameCounter = 20;
  
         private Quaternion originalRotation;
+
+        /// <summary>
+        /// Whether the gamepad's right joystick should control the camera, false is mouse control
+        /// </summary>
+        public bool UseGamepadControls
+        {
+            set { _useGamepadControls = value; }
+        }
  
         void Update ()
         {
@@ -36,8 +45,16 @@ namespace Assets.VR
                 rotAverageY = 0f;
                 rotAverageX = 0f;
  
-                rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-                rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+                if (_useGamepadControls)
+                {
+                    rotationY += Input.GetAxis("VRLookVertical")*sensitivityY;
+                    rotationX += Input.GetAxis("VRLookHorizontal")*sensitivityX;
+                }
+                else
+                {
+                    rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+                    rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+                }
  
                 rotArrayY.Add(rotationY);
                 rotArrayX.Add(rotationX);
@@ -71,7 +88,14 @@ namespace Assets.VR
             {			
                 rotAverageX = 0f;
  
-                rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+                if (_useGamepadControls)
+                {
+                    rotationX += Input.GetAxis("VRLookHorizontal")*sensitivityX;
+                }
+                else
+                {
+                    rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+                }
  
                 rotArrayX.Add(rotationX);
  
@@ -92,7 +116,14 @@ namespace Assets.VR
             {			
                 rotAverageY = 0f;
  
-                rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+                if (_useGamepadControls)
+                {
+                    rotationY += Input.GetAxis("VRLookVertical")*sensitivityY;
+                }
+                else
+                {
+                    rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+                }
  
                 rotArrayY.Add(rotationY);
  

@@ -50,7 +50,7 @@ namespace Assets.Managers
             if (_inputConfiguration == InputConfiguration.Gamepad && _displayConfiguration == DisplayConfiguration.SingleMonitorToggle)
             {
                 // Need to be able to see both characters if we have both control types
-                _displayConfiguration = DisplayConfiguration.SingleMonitorSplit;
+//                _displayConfiguration = DisplayConfiguration.SingleMonitorSplit;
             }
 
             // Set the correct display configuration

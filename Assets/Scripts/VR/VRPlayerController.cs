@@ -7,17 +7,19 @@ namespace Assets.VR
 	public class VRPlayerController : CustomMonoBehaviour
 	{
 	    [SerializeField] private float _moveSpeed = 5;
+	    [SerializeField] private bool _useGamepadLook = true;
 
 	    private Transform _cameraTransform;
 	    private Camera _camera;
 	    private CharacterController _controller;
+	    private SmoothMouseLook _mouseLook;
 
         // Development
 	    private bool _useKeyboardControls = false;
 	    private bool _allowControl = true;
 
         /// <summary>
-        /// Whether the VR player is controlled by the keyboard as well as the gamepad
+        /// Whether the VR player is controlled by the keyboard instead of the gamepad
         /// </summary>
 	    public bool UseKeyboardControls
 	    {
@@ -37,18 +39,33 @@ namespace Assets.VR
 	        _camera = GetComponentInChildren<Camera>();
 	        _cameraTransform = _camera.transform;
 	        _controller = GetComponent<CharacterController>();
+	        _mouseLook = GetComponentInChildren<SmoothMouseLook>();
 	    }
 
 	    private void Update()
 	    {
 	        if (!_allowControl) return;
 
-	        float hor = Input.GetAxis("VRHorizontal");
-	        float ver = Input.GetAxis("VRVertical");
+	        float hor = 0;
+	        float ver = 0;
 	        if (_useKeyboardControls)
 	        {
-	            hor += Input.GetAxis("Horizontal");
-	            ver += Input.GetAxis("Vertical");
+	            hor = Input.GetAxis("Horizontal");
+	            ver = Input.GetAxis("Vertical");
+	            _mouseLook.UseGamepadControls = false;
+	        }
+	        else
+	        {
+	            hor = Input.GetAxis("VRHorizontal");
+	            ver = Input.GetAxis("VRVertical");
+	            if (_useGamepadLook)
+	            {
+	                _mouseLook.UseGamepadControls = true;
+	            }
+                else
+	            {
+	                _mouseLook.UseGamepadControls = false;
+	            }
 	        }
 
             // Rotate movement vector by VR camera's y rotation
