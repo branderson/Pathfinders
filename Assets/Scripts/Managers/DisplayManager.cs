@@ -1,3 +1,4 @@
+using System;
 using Assets.Monitor;
 using Assets.Utility;
 using Assets.VR;
@@ -46,6 +47,19 @@ namespace Assets.Managers
 
         private void Update()
         {
+            // Bind F1 to cycle DisplayConfiguration
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                // Enum hack to cycle through enum values
+                _displayConfiguration = (DisplayConfiguration)((int)++_displayConfiguration%4);
+            }
+            // Bind F2 to cycle InputConfiguration
+            if (Input.GetKeyDown(KeyCode.F2))
+            {
+                // Enum hack to cycle through enum values
+                _inputConfiguration = (InputConfiguration)((int)++_inputConfiguration%2);
+            }
+
             // Prevent incompatible configurations
             if (_inputConfiguration == InputConfiguration.Gamepad && _displayConfiguration == DisplayConfiguration.SingleMonitorToggle)
             {

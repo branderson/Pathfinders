@@ -27,6 +27,14 @@ namespace Assets.VR
 	    }
 
         /// <summary>
+        /// Whether the VR player can use the gamepad's right stick to look around
+        /// </summary>
+	    public bool UseGamepadLook
+	    {
+	        set { _useGamepadLook = value; }
+	    }
+
+        /// <summary>
         /// Whether the VR player can be controlled
         /// </summary>
 	    public bool AllowControl
