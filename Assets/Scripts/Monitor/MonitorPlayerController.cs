@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using Assets.Utility;
 using Assets.Utility.Static;
+using Assets.VR;
 
 namespace Assets.Monitor
 {
@@ -13,19 +14,32 @@ namespace Assets.Monitor
 
 	    private Rigidbody _rigidbody;
 	    private CharacterController _controller;
+	    private SmoothMouseLook _mouseLook;
 
         /// <summary>
         /// Whether the monitor player can be controlled
         /// </summary>
 	    public bool AllowControl
 	    {
-	        set { _allowControl = value; }
+            set
+            {
+                _allowControl = value;
+                if (_allowControl)
+                {
+                    _mouseLook.enabled = true;
+                }
+                else
+                {
+                    _mouseLook.enabled = false;
+                }
+            }
 	    }
 
 	    private void Awake()
 	    {
 //	        _rigidbody = GetComponent<Rigidbody>();
 	        _controller = GetComponent<CharacterController>();
+	        _mouseLook = GetComponent<SmoothMouseLook>();
 	    }
 
 	    private void Update()

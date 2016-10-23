@@ -31,7 +31,18 @@ namespace Assets.VR
         /// </summary>
 	    public bool AllowControl
 	    {
-	        set { _allowControl = value; }
+            set
+            {
+                _allowControl = value;
+                if (_allowControl)
+                {
+                    _mouseLook.enabled = true;
+                }
+                else
+                {
+                    _mouseLook.enabled = false;
+                }
+            }
 	    }
 
 	    private void Awake()
