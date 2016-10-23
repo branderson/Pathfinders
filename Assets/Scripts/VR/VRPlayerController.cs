@@ -46,6 +46,7 @@ namespace Assets.VR
 	    {
 	        if (!_allowControl) return;
 
+            // Get input
 	        float hor = 0;
 	        float ver = 0;
 	        if (_useKeyboardControls)
@@ -58,14 +59,7 @@ namespace Assets.VR
 	        {
 	            hor = Input.GetAxis("VRHorizontal");
 	            ver = Input.GetAxis("VRVertical");
-	            if (_useGamepadLook)
-	            {
-	                _mouseLook.UseGamepadControls = true;
-	            }
-                else
-	            {
-	                _mouseLook.UseGamepadControls = false;
-	            }
+                _mouseLook.UseGamepadControls = _useGamepadLook;
 	        }
 
             // Rotate movement vector by VR camera's y rotation
