@@ -6,12 +6,31 @@ namespace Assets.VR
 {
 	public class VRPlayerController : CustomMonoBehaviour
 	{
-	    [SerializeField] private bool _useKeyboardControls = false;
 	    [SerializeField] private float _moveSpeed = 5;
 
 	    private Transform _cameraTransform;
 	    private Camera _camera;
 	    private CharacterController _controller;
+
+        // Development
+	    private bool _useKeyboardControls = false;
+	    private bool _allowControl = true;
+
+        /// <summary>
+        /// Whether the VR player is controlled by the keyboard as well as the gamepad
+        /// </summary>
+	    public bool UseKeyboardControls
+	    {
+	        set { _useKeyboardControls = value; }
+	    }
+
+        /// <summary>
+        /// Whether the VR player can be controlled
+        /// </summary>
+	    public bool AllowControl
+	    {
+	        set { _allowControl = value; }
+	    }
 
 	    private void Awake()
 	    {
@@ -22,6 +41,8 @@ namespace Assets.VR
 
 	    private void Update()
 	    {
+	        if (!_allowControl) return;
+
 	        float hor = Input.GetAxis("VRHorizontal");
 	        float ver = Input.GetAxis("VRVertical");
 	        if (_useKeyboardControls)
