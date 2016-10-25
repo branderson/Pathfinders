@@ -25,9 +25,9 @@ namespace Assets.Managers
     /// </summary>
     public class DisplayManager : Singleton<DisplayManager>
     {
-        private static Rect _vrRect = new Rect(.5f, 0, .5f, 1);
-        private static Rect _monitorRect = new Rect(0, 0, .5f, 1);
-        private static Rect _screenRect = new Rect(0, 0, 1, 1);
+        private static readonly Rect VRRect = new Rect(.5f, 0, .5f, 1);
+        private static readonly Rect MonitorRect = new Rect(0, 0, .5f, 1);
+        private static readonly Rect ScreenRect = new Rect(0, 0, 1, 1);
 
         [SerializeField] private DisplayConfiguration _displayConfiguration = DisplayConfiguration.SingleMonitorToggle;
         [SerializeField] private InputConfiguration _inputConfiguration = InputConfiguration.NoGamepad;
@@ -134,7 +134,7 @@ namespace Assets.Managers
             _vrCamera.enabled = true;
             if (config != DisplayConfiguration.SingleMonitorSplit)
             {
-                _vrCamera.rect = _screenRect;
+                _vrCamera.rect = ScreenRect;
             }
             switch (config)
             {
@@ -148,7 +148,7 @@ namespace Assets.Managers
                     break;
                 case DisplayConfiguration.SingleMonitorSplit:
                     // Set up viewport on left half of the screen
-                    _vrCamera.rect = _vrRect;
+                    _vrCamera.rect = VRRect;
                     _vrCamera.targetDisplay = 0;
                     _vrCamera.stereoTargetEye = StereoTargetEyeMask.None;
                     break;
@@ -164,7 +164,7 @@ namespace Assets.Managers
             _monitorCamera.enabled = true;
             if (config != DisplayConfiguration.SingleMonitorSplit)
             {
-                _monitorCamera.rect = _screenRect;
+                _monitorCamera.rect = ScreenRect;
             }
             switch (config)
             {
@@ -175,7 +175,7 @@ namespace Assets.Managers
                     _monitorCamera.targetDisplay = 0;
                     break;
                 case DisplayConfiguration.SingleMonitorSplit:
-                    _monitorCamera.rect = _monitorRect;
+                    _monitorCamera.rect = MonitorRect;
                     _monitorCamera.targetDisplay = 0;
                     break;
                 case DisplayConfiguration.SingleMonitorToggle:
