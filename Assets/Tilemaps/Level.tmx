@@ -50,9 +50,9 @@
  </tileset>
  <layer name="Map" width="20" height="20">
   <properties>
-   <property name="Combine" type="bool" value="false"/>
+   <property name="Combine" type="bool" value="true"/>
    <property name="Height" type="float" value="0"/>
-   <property name="Static" type="bool" value="true"/>
+   <property name="Static" type="bool" value="false"/>
   </properties>
   <data encoding="base64" compression="zlib">
    eJzNlIsKwCAIRd1m+/9PLtkECRM1BxOkQDvdSw8APdrIY+S9qEfjmsadIG34zk94dHJm9FqaMnq/4pHv2Z/07/XOPFqLjj4r5Fl49830aPdxh6fdxyiPNVGiUo/ytP4/8ea3Jn1neBW91TzrP2mw9p7RUPEXVvOkf4+/DiFdAPQ=
