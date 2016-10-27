@@ -6,7 +6,7 @@ namespace Assets.VR
 {
 	public class VRPlayerController : CustomMonoBehaviour
 	{
-	    [SerializeField] private float _moveSpeed = 5;
+	    [SerializeField] private float _moveSpeed = 5;          // Player speed in m/sec
 	    [SerializeField] private bool _useGamepadLook = true;
 
 	    private Transform _cameraTransform;

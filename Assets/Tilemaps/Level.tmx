@@ -50,15 +50,18 @@
  </tileset>
  <layer name="Map" width="20" height="20">
   <properties>
-   <property name="Height" type="float" value="2"/>
+   <property name="Combine" type="bool" value="false"/>
+   <property name="Height" type="float" value="0"/>
+   <property name="Static" type="bool" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzVlEsKwDAIRG3zuf+RkywCIpqMkpZWcOXkkcFBov9V6X0ZXQO8FJy9zRu+pb+b/N4nb7zNgG5VZcPw8izN3HkFtAgvKXMvj+cwK3MvT9N/icezJn1HeCe0p3nSI8+bvDto7q0/RG7B0zzuH/HXAKQWAN8=
+   eJzNlIsKwCAIRd1m+/9PLtkECRM1BxOkQDvdSw8APdrIY+S9qEfjmsadIG34zk94dHJm9FqaMnq/4pHv2Z/07/XOPFqLjj4r5Fl49830aPdxh6fdxyiPNVGiUo/ytP4/8ea3Jn1neBW91TzrP2mw9p7RUPEXVvOkf4+/DiFdAPQ=
   </data>
  </layer>
  <layer name="Floor" width="20" height="20" visible="0">
   <properties>
    <property name="Height" type="float" value="0"/>
+   <property name="Static" type="bool" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2BkAfaBdsAoGAXDBAAAHVQACA==
