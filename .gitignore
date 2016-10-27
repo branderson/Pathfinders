@@ -15,8 +15,6 @@ obj/
 Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll.meta
 Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll.meta
 Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
-Assets/Standard\ Assets/
-Assets/Standard\ Assets.meta
 Assets/Extensions/
 *.csproj
 *.svd
