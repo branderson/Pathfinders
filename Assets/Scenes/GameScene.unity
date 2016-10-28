@@ -6838,7 +6838,7 @@ Prefab:
     - target: {fileID: 114000012334718702, guid: fea230b2822d7284c8dc89e2dd54822c,
         type: 2}
       propertyPath: _displayConfiguration
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000012334718702, guid: fea230b2822d7284c8dc89e2dd54822c,
         type: 2}

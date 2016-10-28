@@ -36,6 +36,7 @@ namespace Assets.Managers
         [SerializeField] private VRPlayerController _vrPlayer;
         [SerializeField] private MonitorPlayerController _monitorPlayer;
         private SelectedPlayer _selectedPlayer = SelectedPlayer.VRPlayer;
+        private bool _secondDisplayActivated = false;
 
         protected DisplayManager() { }
 
@@ -143,6 +144,12 @@ namespace Assets.Managers
                     _vrCamera.stereoTargetEye = StereoTargetEyeMask.Both;
                     break;
                 case DisplayConfiguration.DualMonitor:
+                    // This cannot be undone
+                    if (!_secondDisplayActivated)
+                    {
+                        _secondDisplayActivated = true;
+                        Display.displays[1].Activate(Display.displays[1].systemWidth, Display.displays[1].systemHeight, 60);
+                    }
                     _vrCamera.targetDisplay = 1;
                     _vrCamera.stereoTargetEye = StereoTargetEyeMask.None;
                     break;
