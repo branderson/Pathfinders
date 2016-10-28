@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f081a47e919d8ea4382b1a1a8989196d, type: 3}
+  m_Script: {fileID: 11500000, guid: 533f1f84181a1754c8c50a3e38a96d94, type: 3}
   m_Name: Floor
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1000013199349288, guid: aa529ebca1a414d47b37f754cea365f8, type: 2}

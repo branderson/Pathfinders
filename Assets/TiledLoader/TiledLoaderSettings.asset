@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e820b89b741dfd84a9b8142dd69cc336, type: 3}
+  m_Script: {fileID: 11500000, guid: aa38b7cd3c05a624a908a7dbdf5495b9, type: 3}
   m_Name: TiledLoaderSettings
   m_EditorClassIdentifier: 
   IDProperty: Name
@@ -17,7 +17,7 @@ MonoBehaviour:
   CombineProperty: Combine
   StaticProperty: Static
   DefaultScalingFactor: 1
-  DefaultImportStatic: 1
+  DefaultImportStatic: 0
   UseTileIndex: 0
   CombineMaterial: {fileID: 2100000, guid: df07425beb2980a459e489ce328da34b, type: 2}
   MapTiledYToUnityZ: 1
