@@ -145,7 +145,7 @@ namespace Assets.Managers
                     break;
                 case DisplayConfiguration.DualMonitor:
                     // This cannot be undone
-                    if (!_secondDisplayActivated)
+                    if (!_secondDisplayActivated && Display.displays.Length > 1)
                     {
                         _secondDisplayActivated = true;
                         Display.displays[1].Activate(Display.displays[1].systemWidth, Display.displays[1].systemHeight, 60);
