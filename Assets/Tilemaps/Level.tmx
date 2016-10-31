@@ -19,6 +19,12 @@
     <property name="Name" value="Floor"/>
    </properties>
   </tile>
+  <tile id="5">
+   <properties>
+    <property name="Height" type="float" value="2"/>
+    <property name="Name" value="Enemy1"/>
+   </properties>
+  </tile>
   <tile id="16">
    <properties>
     <property name="Name" value="StraightEndWall"/>
@@ -106,6 +112,7 @@
   <properties>
    <property name="Combine" type="bool" value="true"/>
    <property name="Height" type="float" value="0"/>
+   <property name="Layer" value="Baked Lighting"/>
    <property name="Static" type="bool" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
@@ -115,10 +122,16 @@
  <layer name="Floor" width="20" height="20" visible="0">
   <properties>
    <property name="Height" type="float" value="0"/>
+   <property name="Layer" value="Baked Lighting"/>
    <property name="Static" type="bool" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2AUUAqYB9oBo2AUDAAAAA8oAAQ=
+  </data>
+ </layer>
+ <layer name="Enemies" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBiZgG2gHTAKyAYjJe6I9edICY9RMPgAAFn4ABk=
   </data>
  </layer>
 </map>
