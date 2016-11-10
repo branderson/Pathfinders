@@ -22,6 +22,7 @@ GameObject:
   - 33: {fileID: 33000012986373338}
   - 23: {fileID: 23000012031820518}
   - 65: {fileID: 65000010744847686}
+  - 220: {fileID: 220000013470243488}
   m_Layer: 0
   m_Name: StraightWall
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011902588176}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -11.53, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children: []
@@ -90,3 +91,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.0000005, z: 5}
   m_Center: {x: 0, y: 0, z: 2.5}
+--- !u!220 &220000013470243488
+LightProbeGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011902588176}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1, y: 0, z: 3}
+  - {x: 1, y: 0, z: 1}
+  - {x: -1, y: 0, z: 3}
+  - {x: -1, y: 0, z: 1}

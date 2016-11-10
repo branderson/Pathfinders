@@ -8,14 +8,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa38b7cd3c05a624a908a7dbdf5495b9, type: 3}
+  m_Script: {fileID: -950391427, guid: e5a5823680fb681469e6c3d3124d7306, type: 3}
   m_Name: TiledLoaderSettings
   m_EditorClassIdentifier: 
   IDProperty: Name
   RotationProperty: Rotation
+  ScaleXProperty: ScaleX
+  ScaleYProperty: ScaleY
+  ScaleZProperty: ScaleZ
   ThirdAxisProperty: Height
   CombineProperty: Combine
   StaticProperty: Static
+  LayerProperty: Layer
+  TiledLoaderPath: TiledLoader
   DefaultScalingFactor: 1
   DefaultImportStatic: 0
   UseTileIndex: 0
@@ -23,4 +28,7 @@ MonoBehaviour:
   MapTiledYToUnityZ: 1
   ParentTilesToLayers: 1
   ParentLayersToTiledLoader: 1
+  LayerPrefab: {fileID: 0}
+  InstanceComponent: {fileID: 0}
+  LayerComponent: {fileID: 0}
   WarnUnmatchedTiles: 1

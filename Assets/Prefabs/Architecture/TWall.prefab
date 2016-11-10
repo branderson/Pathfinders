@@ -23,6 +23,7 @@ GameObject:
   - 23: {fileID: 23000010287034154}
   - 65: {fileID: 65000010484869820}
   - 65: {fileID: 65000010904624044}
+  - 220: {fileID: 220000013119300588}
   m_Layer: 0
   m_Name: TWall
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013809070374}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -10.142664, y: 5.000004, z: -4.8986616}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children: []
@@ -103,3 +104,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.75, z: 5}
   m_Center: {x: 0, y: 0.125, z: 2.5}
+--- !u!220 &220000013119300588
+LightProbeGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013809070374}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1, y: 0, z: 3}
+  - {x: 1, y: 0, z: 1}
+  - {x: -1, y: 0, z: 3}
+  - {x: -1, y: 0, z: 1}

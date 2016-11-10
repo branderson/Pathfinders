@@ -1,4 +1,4 @@
-using Assets.TiledLoader;
+using TiledLoader;
 using Assets.Utility;
 using UnityEngine;
 
