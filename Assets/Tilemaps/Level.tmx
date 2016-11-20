@@ -139,17 +139,17 @@
   <object id="8" gid="6" x="113.333" y="58.6667" width="16" height="16"/>
   <object id="13" name="Enemy1" gid="6" x="306.605" y="75.79" width="36.6667" height="16" rotation="-195.938">
    <properties>
-    <property name="Height" type="float" value="2"/>
+    <property name="Height" value="2"/>
    </properties>
   </object>
   <object id="17" name="Enemy1" gid="6" x="297.12" y="155.646" width="36.6667" height="42.321" rotation="48.5263">
    <properties>
-    <property name="Height" type="float" value="2"/>
+    <property name="Height" value="2"/>
    </properties>
   </object>
   <object id="18" name="Enemy1" gid="6" x="149.417" y="271.75" width="36.6667" height="16">
    <properties>
-    <property name="Height" type="float" value="2"/>
+    <property name="Height" value="2"/>
    </properties>
   </object>
  </objectgroup>

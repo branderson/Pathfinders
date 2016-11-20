@@ -1,7 +1,6 @@
-using TiledLoader.Editor;
 using UnityEditor;
 
-namespace Assets.Extensions.TiledLoader.Editor
+namespace TiledLoader.Editor
 {
     public class TiledLoader
     {

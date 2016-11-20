@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 2163b06fdc685fb458d2522e5ba68a56
+timeCreated: 1479626148
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Droid Serif
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 25f7a1476c2287544936d045cbae4091, type: 3}
+  - {fileID: 12800000, guid: 2526e62980c41844d96a757215061098, type: 3}
+  - {fileID: 12800000, guid: 1365169a7bc3b7541acf865cd9d48042, type: 3}
+  - {fileID: 12800000, guid: b6e2f50b2ebb0194a9a01bd32ef3fd34, type: 3}
+  - {fileID: 12800000, guid: 423b7cfe443b92d4db5c565884576caa, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
