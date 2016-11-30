@@ -39,6 +39,7 @@ GameObject:
   - 4: {fileID: 4000010879754426}
   - 114: {fileID: 114000013168019748}
   - 143: {fileID: 143000011270815546}
+  - 114: {fileID: 114000014098009732}
   m_Layer: 0
   m_Name: VRPlayer
   m_TagString: Untagged
@@ -282,6 +283,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 1.4
   _useGamepadLook: 1
+  _smoothMouseLook: 0
+--- !u!114 &114000014098009732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012659038042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc18d07209e3d3c4e802703037916f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &124000011613391324
 Behaviour:
   m_ObjectHideFlags: 1

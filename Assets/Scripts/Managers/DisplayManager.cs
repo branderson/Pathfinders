@@ -31,6 +31,7 @@ namespace Assets.Managers
 
         [SerializeField] private DisplayConfiguration _displayConfiguration = DisplayConfiguration.SingleMonitorToggle;
         [SerializeField] private InputConfiguration _inputConfiguration = InputConfiguration.NoGamepad;
+        [SerializeField] private bool _alwaysUseFixedRotation = false;
         [SerializeField] private Camera _vrCamera;
         [SerializeField] private Camera _monitorCamera;
         [SerializeField] private VRPlayerController _vrPlayer;
@@ -60,6 +61,11 @@ namespace Assets.Managers
                 // Enum hack to cycle through enum values
                 _inputConfiguration = (InputConfiguration)((int)++_inputConfiguration%2);
             }
+            // Bind F3 to cycle fixed rotation lock
+            if (Input.GetKeyDown(KeyCode.F3))
+            {
+                _alwaysUseFixedRotation = !_alwaysUseFixedRotation;
+            }
 
             // Prevent incompatible configurations
             if (_inputConfiguration == InputConfiguration.Gamepad && _displayConfiguration == DisplayConfiguration.SingleMonitorToggle)
@@ -74,14 +80,31 @@ namespace Assets.Managers
                 case DisplayConfiguration.VR:
                     EnableVRCamera(_displayConfiguration);
                     EnableMonitorCamera(_displayConfiguration);
+                    _vrPlayer.SmoothMouseLook = false;
                     break;
                 case DisplayConfiguration.DualMonitor:
                     EnableVRCamera(_displayConfiguration);
                     EnableMonitorCamera(_displayConfiguration);
+                    if (_alwaysUseFixedRotation)
+                    {
+                        _vrPlayer.SmoothMouseLook = false;
+                    }
+                    else
+                    {
+                        _vrPlayer.SmoothMouseLook = true;
+                    }
                     break;
                 case DisplayConfiguration.SingleMonitorSplit:
                     EnableVRCamera(_displayConfiguration);
                     EnableMonitorCamera(_displayConfiguration);
+                    if (_alwaysUseFixedRotation)
+                    {
+                        _vrPlayer.SmoothMouseLook = false;
+                    }
+                    else
+                    {
+                        _vrPlayer.SmoothMouseLook = true;
+                    }
                     break;
                 case DisplayConfiguration.SingleMonitorToggle:
                     if (_selectedPlayer == SelectedPlayer.VRPlayer)
@@ -93,6 +116,14 @@ namespace Assets.Managers
                     {
                         EnableMonitorCamera(_displayConfiguration);
                         DisableVRCamera();
+                    }
+                    if (_alwaysUseFixedRotation)
+                    {
+                        _vrPlayer.SmoothMouseLook = false;
+                    }
+                    else
+                    {
+                        _vrPlayer.SmoothMouseLook = true;
                     }
                     break;
             }

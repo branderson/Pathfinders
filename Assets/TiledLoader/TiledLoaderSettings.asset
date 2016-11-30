@@ -13,22 +13,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IDProperty: Name
   RotationProperty: Rotation
+  ThirdAxisProperty: Height
+  VisibleProperty: Visible
+  TiledLoaderPath: TiledLoader
+  DefaultScalingFactor: 1
+  ParentTilesToLayers: 1
+  ParentLayersToTiledLoader: 1
+  MapTiledYToUnityZ: 1
+  IgnoreLayerVisible: 1
+  DockWindows: 1
+  WarnUnmatchedTiles: 1
   ScaleXProperty: ScaleX
   ScaleYProperty: ScaleY
   ScaleZProperty: ScaleZ
-  ThirdAxisProperty: Height
   CombineProperty: Combine
   StaticProperty: Static
   LayerProperty: Layer
-  TiledLoaderPath: TiledLoader
-  DefaultScalingFactor: 1
   DefaultImportStatic: 0
-  UseTileIndex: 0
   CombineMaterial: {fileID: 2100000, guid: df07425beb2980a459e489ce328da34b, type: 2}
-  MapTiledYToUnityZ: 1
-  ParentTilesToLayers: 1
-  ParentLayersToTiledLoader: 1
   LayerPrefab: {fileID: 0}
   InstanceComponent: {fileID: 0}
   LayerComponent: {fileID: 0}
-  WarnUnmatchedTiles: 1
