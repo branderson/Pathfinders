@@ -11,15 +11,15 @@ namespace Assets.Managers
     {
         protected GameManager() { }
 
-        private void Update()
+        private void Quit()
         {
-            if (Input.GetButtonDown("Cancel"))
-            {
+//            if (Input.GetButtonDown("Cancel"))
+//            {
 #if UNITY_EDITOR
                 EditorApplication.isPlaying = false;
 #endif
                 Application.Quit();
-            }
+//            }
         }
     }
 }

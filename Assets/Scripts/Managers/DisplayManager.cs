@@ -49,22 +49,42 @@ namespace Assets.Managers
 
         private void Update()
         {
+            bool updateDisplayConfig = false;
+            bool updateInputConfig = false;
+
             // Bind F1 to cycle DisplayConfiguration
-            if (Input.GetKeyDown(KeyCode.F1))
-            {
-                // Enum hack to cycle through enum values
-                _displayConfiguration = (DisplayConfiguration)((int)++_displayConfiguration%4);
-            }
-            // Bind F2 to cycle InputConfiguration
             if (Input.GetKeyDown(KeyCode.F2))
             {
                 // Enum hack to cycle through enum values
-                _inputConfiguration = (InputConfiguration)((int)++_inputConfiguration%2);
+                _displayConfiguration = (DisplayConfiguration)((int)++_displayConfiguration%4);
+                updateDisplayConfig = true;
             }
-            // Bind F3 to cycle fixed rotation lock
+            // Bind F2 to cycle InputConfiguration
             if (Input.GetKeyDown(KeyCode.F3))
             {
+                // Enum hack to cycle through enum values
+                _inputConfiguration = (InputConfiguration)((int)++_inputConfiguration%2);
+                updateInputConfig = true;
+            }
+            // Bind F3 to cycle fixed rotation lock
+            if (Input.GetKeyDown(KeyCode.F4))
+            {
                 _alwaysUseFixedRotation = !_alwaysUseFixedRotation;
+                updateDisplayConfig = true;
+                updateInputConfig = true;
+            }
+
+            // Handle toggling selected character if in single monitor toggle or no gamepad
+            if (_inputConfiguration == InputConfiguration.NoGamepad || _displayConfiguration == DisplayConfiguration.SingleMonitorToggle)
+            {
+                // Hard-code debug toggle player key to tab
+                if (Input.GetKeyDown(KeyCode.F1))
+                {
+                    // Enum hack to toggle selected player (rolls over to VRPlayer from MonitorPlayer)
+                    _selectedPlayer = (SelectedPlayer)((int)++_selectedPlayer%2);
+                    updateDisplayConfig = true;
+                    updateInputConfig = true;
+                }
             }
 
             // Prevent incompatible configurations
@@ -75,6 +95,20 @@ namespace Assets.Managers
             }
 
             // Set the correct display configuration
+            if (updateDisplayConfig)
+            {
+                UpdateDisplayConfiguration();
+            }
+
+            // Set the correct input configuration
+            if (updateInputConfig)
+            {
+                UpdateInputConfiguration();
+            }
+        }
+
+        private void UpdateDisplayConfiguration()
+        {
             switch (_displayConfiguration)
             {
                 case DisplayConfiguration.VR:
@@ -127,8 +161,10 @@ namespace Assets.Managers
                     }
                     break;
             }
+        }
 
-            // Set the correct input configuration
+        private void UpdateInputConfiguration()
+        {
             switch (_inputConfiguration)
             {
                 case InputConfiguration.Gamepad:
@@ -147,17 +183,6 @@ namespace Assets.Managers
                         DisableVRControls();
                     }
                     break;
-            }
-
-            // Handle toggling selected character if in single monitor toggle or no gamepad
-            if (_inputConfiguration == InputConfiguration.NoGamepad || _displayConfiguration == DisplayConfiguration.SingleMonitorToggle)
-            {
-                // Hard-code debug toggle player key to tab
-                if (Input.GetKeyDown(KeyCode.Tab))
-                {
-                    // Enum hack to toggle selected player (rolls over to VRPlayer from MonitorPlayer)
-                    _selectedPlayer = (SelectedPlayer)((int)++_selectedPlayer%2);
-                }
             }
         }
 

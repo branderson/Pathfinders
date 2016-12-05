@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="7" height="7" tilewidth="16" tileheight="16" nextobjectid="19">
+ <tileset firstgid="1" name="Tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
+  <image source="../Sprites/Tilesheet.png" width="256" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="Name" value="StraightWall"/>
+    <property name="Rotation" value="0"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Name" value="StraightWall"/>
+    <property name="Rotation" value="90"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="Name" value="Floor"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="Enemy" value="10"/>
+    <property name="Height" value="2"/>
+    <property name="Name" value="Enemy1"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="Name" value="StraightEndWall"/>
+    <property name="Rotation" value="0"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="Name" value="StraightEndWall"/>
+    <property name="Rotation" value="180"/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="Name" value="StraightEndWall"/>
+    <property name="Rotation" value="270"/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="Name" value="StraightEndWall"/>
+    <property name="Rotation" value="90"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="Name" value="CornerWall"/>
+    <property name="Rotation" value="90"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="Name" value="CornerWall"/>
+    <property name="Rotation" value="180"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="Name" value="CornerWall"/>
+    <property name="Rotation" value="0"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="Name" value="CornerWall"/>
+    <property name="Rotation" value="270"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="Name" value="PlusWall"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="Name" value="PlusEndWall"/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="Name" value="TWall"/>
+    <property name="Rotation" value="0"/>
+   </properties>
+  </tile>
+  <tile id="97">
+   <properties>
+    <property name="Name" value="TWall"/>
+    <property name="Rotation" value="180"/>
+   </properties>
+  </tile>
+  <tile id="112">
+   <properties>
+    <property name="Name" value="TWall"/>
+    <property name="Rotation" value="270"/>
+   </properties>
+  </tile>
+  <tile id="113">
+   <properties>
+    <property name="Name" value="TWall"/>
+    <property name="Rotation" value="90"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Map" width="7" height="7">
+  <properties>
+   <property name="Combine" value="true"/>
+   <property name="Height" value="0"/>
+   <property name="Layer" value="Baked Lighting"/>
+   <property name="Static" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJwzZGBgYMKCjYCYkQE7YBwAOUcc7nQCYgBbvAEF
+  </data>
+ </layer>
+ <layer name="Floor" width="7" height="7" visible="0">
+  <properties>
+   <property name="Height" value="0"/>
+   <property name="Layer" value="Baked Lighting"/>
+   <property name="Static" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYKAdYKah2cgAAAH8AAQ=
+  </data>
+ </layer>
+</map>

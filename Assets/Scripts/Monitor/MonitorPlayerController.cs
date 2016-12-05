@@ -10,11 +10,17 @@ namespace Assets.Monitor
 	{
 	    [SerializeField] private float _moveSpeed = 5f;
 	    [SerializeField] private float _vertSpeed = 5f;
+	    [SerializeField] private float _minimumHeight = 5f;
+	    [SerializeField] private float _maximumHeight = 25f;
+	    [SerializeField] private bool _canEnable = true;
 	    private bool _allowControl = true;
 
 	    private Rigidbody _rigidbody;
 	    private CharacterController _controller;
 	    private SmoothMouseLook _mouseLook;
+//	    private MonitorMenuController _menu;
+
+	    public bool LockedControl = false;
 
         /// <summary>
         /// Whether the monitor player can be controlled
@@ -23,6 +29,8 @@ namespace Assets.Monitor
 	    {
             set
             {
+                if (!_canEnable) return;
+                if (LockedControl) return;
                 _allowControl = value;
                 if (_allowControl)
                 {
@@ -40,6 +48,11 @@ namespace Assets.Monitor
 //	        _rigidbody = GetComponent<Rigidbody>();
 	        _controller = GetComponent<CharacterController>();
 	        _mouseLook = GetComponent<SmoothMouseLook>();
+//	        _menu = GetComponent<MonitorMenuController>();
+	        if (!_canEnable)
+	        {
+	            _allowControl = false;
+	        }
 	    }
 
 	    private void Update()
@@ -56,6 +69,11 @@ namespace Assets.Monitor
 	        {
 	            move.y = alt*_vertSpeed*Time.deltaTime;
 	        }
+
+            // Constrain position along Y-axis
+	        if (transform.position.y + move.y > _maximumHeight) move.y = _maximumHeight - transform.position.y;
+	        else if (transform.position.y + move.y < _minimumHeight) move.y = _minimumHeight - transform.position.y;
+
 	        _controller.Move(move);
 	    }
 	}
