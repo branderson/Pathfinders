@@ -20,6 +20,13 @@ namespace Assets.VR
 	    private bool _useKeyboardControls = false;
 	    private bool _allowControl = true;
 
+	    public bool LockMovement = false;
+
+	    public Transform CameraTransform
+	    {
+	        get { return _cameraTransform; }
+	    }
+
         /// <summary>
         /// Whether the VR player is controlled by the keyboard instead of the gamepad
         /// </summary>
@@ -113,7 +120,10 @@ namespace Assets.VR
 	        move.y = 0;
 
 //            transform.AdjustLocalPosition(_moveSpeed*move.x*Time.deltaTime, 0, _moveSpeed*move.z*Time.deltaTime);
-	        _controller.SimpleMove(move*_moveSpeed);
+	        if (!LockMovement)
+	        {
+                _controller.SimpleMove(move*_moveSpeed);
+	        }
 	    }
 	}
 } 

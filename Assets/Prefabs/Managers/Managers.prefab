@@ -16,13 +16,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000014075203016}
-  - 114: {fileID: 114000012334718702}
-  - 114: {fileID: 114000012873428320}
+  - component: {fileID: 4000014075203016}
+  - component: {fileID: 114000012334718702}
+  - component: {fileID: 114000012873428320}
+  - component: {fileID: 114476451480052308}
   m_Layer: 0
-  m_Name: DevelopmentDebug
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,10 +38,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114000012334718702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,7 +54,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _displayConfiguration: 3
-  _inputConfiguration: 0
+  _inputConfiguration: 1
+  _alwaysUseFixedRotation: 0
   _vrCamera: {fileID: 0}
   _monitorCamera: {fileID: 0}
   _vrPlayer: {fileID: 0}
@@ -67,5 +69,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 502f099a8cf80c84080fee750b9fb0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114476451480052308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012626308994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913e87d24ca26be4fa5954ef7faed665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

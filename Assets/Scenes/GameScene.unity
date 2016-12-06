@@ -5111,6 +5111,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6e1d36c4bbd37d54f9ea183e4f5fd656, type: 2}
+    - target: {fileID: 20000012251602280, guid: d31e8b89a400c444898ecc944f749aad,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294966783
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d31e8b89a400c444898ecc944f749aad, type: 2}
   m_IsPrefabParent: 0
@@ -10916,6 +10921,23 @@ Prefab:
     - target: {fileID: 4000010879754426, guid: 648e9eb010ff5be4185c81df2aa78fc6, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000011904387622, guid: 648e9eb010ff5be4185c81df2aa78fc6,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294966271
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012659038042, guid: 648e9eb010ff5be4185c81df2aa78fc6, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012849091452, guid: 648e9eb010ff5be4185c81df2aa78fc6, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011270951698, guid: 648e9eb010ff5be4185c81df2aa78fc6, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 648e9eb010ff5be4185c81df2aa78fc6, type: 2}

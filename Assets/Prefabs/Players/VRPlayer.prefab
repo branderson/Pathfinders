@@ -16,13 +16,13 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000011780332504}
-  - 33: {fileID: 33000010161032162}
-  - 65: {fileID: 65000012796397192}
-  - 23: {fileID: 23000011926326800}
-  m_Layer: 0
+  - component: {fileID: 4000011780332504}
+  - component: {fileID: 33000010161032162}
+  - component: {fileID: 65000012796397192}
+  - component: {fileID: 23000011926326800}
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,13 +34,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010879754426}
-  - 114: {fileID: 114000013168019748}
-  - 143: {fileID: 143000011270815546}
-  - 114: {fileID: 114000014098009732}
-  m_Layer: 0
+  - component: {fileID: 4000010879754426}
+  - component: {fileID: 114000013168019748}
+  - component: {fileID: 143000011270815546}
+  - component: {fileID: 114000014098009732}
+  m_Layer: 9
   m_Name: VRPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,17 +52,17 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010858150738}
-  - 20: {fileID: 20000011904387622}
-  - 92: {fileID: 92000012628880622}
-  - 124: {fileID: 124000011613391324}
-  - 81: {fileID: 81000012252600270}
-  - 114: {fileID: 114000012564954218}
-  - 114: {fileID: 114000011114272432}
-  - 114: {fileID: 114000011397974440}
-  m_Layer: 0
+  - component: {fileID: 4000010858150738}
+  - component: {fileID: 20000011904387622}
+  - component: {fileID: 92000012628880622}
+  - component: {fileID: 124000011613391324}
+  - component: {fileID: 81000012252600270}
+  - component: {fileID: 114000012564954218}
+  - component: {fileID: 114000011114272432}
+  - component: {fileID: 114000011397974440}
+  m_Layer: 9
   m_Name: VRCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -78,11 +78,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011780332504}
   m_Father: {fileID: 4000010879754426}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000010879754426
 Transform:
   m_ObjectHideFlags: 1
@@ -90,13 +90,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012659038042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010858150738}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000011780332504
 Transform:
   m_ObjectHideFlags: 1
@@ -106,10 +106,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010858150738}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20000011904387622
 Camera:
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966271
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -158,7 +158,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 6e1d36c4bbd37d54f9ea183e4f5fd656, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -166,7 +168,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -284,6 +286,7 @@ MonoBehaviour:
   _moveSpeed: 1.4
   _useGamepadLook: 1
   _smoothMouseLook: 0
+  LockMovement: 0
 --- !u!114 &114000014098009732
 MonoBehaviour:
   m_ObjectHideFlags: 1
