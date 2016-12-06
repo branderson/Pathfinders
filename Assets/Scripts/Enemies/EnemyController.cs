@@ -9,7 +9,12 @@ namespace Assets.Enemies
     {
         private void HandleInstanceProperties()
         {
-//            TiledLoaderProperties properties = GetComponent<TiledLoaderProperties>();
+            //            TiledLoaderProperties properties = GetComponent<TiledLoaderProperties>();
+        }
+        void OnControllerColliderHit(ControllerColliderHit col)
+        {
+            if (col.gameObject.name == "Cube")
+                print("Game Over");
         }
     }
 }
