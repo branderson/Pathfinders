@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Assets.Managers;
 
 public class EnemyAI : MonoBehaviour
@@ -20,29 +21,26 @@ public class EnemyAI : MonoBehaviour
     private CharacterController character;
     private float cur_time;
 
-    // Use this for initialization
-    void Start()
-    {
-        _destination = WaypointManager.Instance.GetWaypoint(Destination);
-        character = GetComponent<CharacterController>();
-
-        //EventManager.Instance.StartListening("Pause", Pause);
-        //EventManager.Instance.StartListening("Unpause", Unpause);
-        //EventManager.Instance.StartListening("Reverse", Reverse);
-    }
-
     void Pause() { pause = true; }
 
     void Unpause() { pause = false; }
 
     void Reverse() { forward = !forward; }
 
+    // Use this for initialization
+    void Start()
+    {
+        _destination = WaypointManager.Instance.GetWaypoint(Destination);
+        character = GetComponent<CharacterController>();
+
+        EventManager.Instance.StartListening("Pause", Pause);
+        EventManager.Instance.StartListening("Unpause", Unpause);
+        EventManager.Instance.StartListening("Reverse", Reverse);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        //Vector3 update_pos = transform.position;
-        //update_pos.x = (float)System.Math.Ceiling(update_pos.x);
-
         if (!pause) {
             Patrol();
             Vector3 move = _destination.GetComponent<Transform>().position - transform.position;
@@ -76,8 +74,7 @@ public class EnemyAI : MonoBehaviour
     void Patrol()
     {
         Vector3 target = _destination.GetComponent<Transform>().position;
-        print(target);
-        print(transform.position);
+      
         target.y = transform.position.y; // Keep waypoint at character's height
         Vector3 move_dir = target - transform.position;
 
