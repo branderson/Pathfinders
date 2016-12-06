@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="27" height="27" tilewidth="16" tileheight="16" nextobjectid="19">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="34">
  <tileset firstgid="1" name="Tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
   <image source="../Sprites/Tilesheet.png" width="256" height="256"/>
   <tile id="0">
@@ -109,7 +109,7 @@
    </properties>
   </tile>
  </tileset>
- <layer name="Map" width="27" height="27">
+ <layer name="Map" width="100" height="100">
   <properties>
    <property name="Combine" value="true"/>
    <property name="Height" value="0"/>
@@ -117,17 +117,61 @@
    <property name="Static" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt1EEKwCAMRNHYG9kbtPc/VNudhETHMJFSGnBpPg/EKiLbgrPfp8iaKU2rkh2tR7eyfO1+3WL5drXXarF81l6vFfVZnlEr6uvtG7VQX8+DtlAfsgdteT7EM9vyfDP3/9Y3W4fY7/BMaI2G0fI8Ed8b/kPUM+NjefQgragH8bE9eqwWy9PzZXn0PJ0sj+W7AEo8B4E=
+   eJzt2NFNwzAQAFDDBmUD2IBuABvABmWDsv8HtoRFONkKTaLUKu9Jpyp1G0V3OTtxSgAAAAAAAAAAAAAAAAAAAADLPOe4XxjHK1zvrbu70n9pqzktfXJKl93z6rG9mtNzjrccn2H88P3Zmtfib1mv1uMlx0eO1854qxf0x/Z6OX1Mv3tgOq8dw3dsp+b0kH7mptb4tI9iD7Gd6fpR5quypj81xvXCPsr9Xuales/HvMdx9qUPxlL7off+/b7v5fwr9Z3ilNr7IeaofVmrx6IeY4n1iHsicf2Y2wu237tOrEfsk7nj3vlYRj3GUvP3EI7jeO+4dz6Wmcv39F3kL8+/6rHOpfmeox5jUY+xxH5rBQAAAAAAAAAAAAAAAAAAt+kLIBcMPg==
   </data>
  </layer>
- <layer name="Floor" width="27" height="27" visible="0">
+ <layer name="Floor" width="100" height="100" visible="0">
   <properties>
    <property name="Height" value="0"/>
    <property name="Layer" value="Baked Lighting"/>
    <property name="Static" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJztzjENAAAIA7Al+PeMhl1wtAqaAPDdXAcAqCwcjAAE
+   eJztzgEJAAAIA7CD/Tsb4yhbgiUAAAAAAAAAAAAAAAAAAAAAAAAAwGfTDgAAAAAAAAAAAAAAAAAAAAAAAMAxC3+bAAQ=
   </data>
  </layer>
+ <objectgroup name="Enemies">
+  <object id="33" name="Enemy1" gid="6" x="865.818" y="801.455" width="16" height="16">
+   <properties>
+    <property name="Destination" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Waypoints">
+  <object id="28" name="Waypoint" gid="5" x="831.091" y="818.909" width="16" height="16">
+   <properties>
+    <property name="ID" type="int" value="1"/>
+    <property name="NextID" type="int" value="2"/>
+    <property name="PreviousID" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="29" name="Waypoint" gid="5" x="772.182" y="812" width="16" height="16">
+   <properties>
+    <property name="ID" type="int" value="2"/>
+    <property name="NextID" type="int" value="3"/>
+    <property name="PreviousID" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="30" name="Waypoint" gid="5" x="773.636" y="768.727" width="16" height="16">
+   <properties>
+    <property name="ID" type="int" value="3"/>
+    <property name="NextID" type="int" value="4"/>
+    <property name="PreviousID" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="31" name="Waypoint" gid="5" x="748.364" y="764.545" width="16" height="16">
+   <properties>
+    <property name="ID" type="int" value="4"/>
+    <property name="NextID" type="int" value="5"/>
+    <property name="PreviousID" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="32" name="Waypoint" gid="5" x="762.545" y="716" width="16" height="16">
+   <properties>
+    <property name="ID" type="int" value="5"/>
+    <property name="NextID" type="int" value="0"/>
+    <property name="PreviousID" type="int" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

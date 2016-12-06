@@ -2,6 +2,7 @@ using Assets.Managers;
 using Assets.Utility;
 using Assets.VR;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Monitor
 {
@@ -123,6 +124,11 @@ namespace Assets.Monitor
                 _commandMenu.Close();
                 _pauseMenu.Close();
             }
+        }
+
+        public void GoToScene(string scene)
+        {
+            SceneManager.LoadScene(scene);
         }
     }
 }

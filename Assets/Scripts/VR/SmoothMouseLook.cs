@@ -147,7 +147,7 @@ namespace Assets.VR
             Rigidbody rb = GetComponent<Rigidbody>();	
             if (rb)
                 rb.freezeRotation = true;
-            originalRotation = transform.localRotation;
+            originalRotation = Quaternion.identity; //transform.localRotation;
         }
  
         public static float ClampAngle (float angle, float min, float max)
