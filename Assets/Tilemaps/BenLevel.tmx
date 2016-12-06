@@ -117,7 +117,7 @@
    <property name="Static" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt2e1xwjAMgGGnG7SblA2aDWAD2AD2/9G4je5UIX8E4tTA+9zlICXNEcuybBMCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADI+ZyOt+nY/fcXwU8sxvn913Qcw29sSgexa2MonNf+H9Yh7Spj1pi5NpK8IB5tDOY15bDwetzGtu+7+uwQruXiITl2zyH161Xrk23fUr/PXbdGzrxa/tk+fJn/nmsHnSet43GeX/fhNfIkNZ/6MOfeWKU/b50fa96zZ7ZOLH3+reIR86Rmvvfo5Hnj2i8+72k+lzq6n89T9VauPzmfrdF2Nk+fXeo5e6ujvXyP1iQvvH6vX0v7JN7c9jh/du+cN5J5BvJa148W93pmOh52XziVe7ccz17Ha+lxyJv7y/ogjiepXGH/fj2D817HSPrtOfzdp/fWmDJnJS4+3W9Te02julbWyPfWVmqBT48vNes+Ox7FGElfl77vHTY/qAU+3b6p2qtrs7SjXqPVrFN6W8v0RI9LsrbOrS1ybRj7u6zfL8Ef8/Q9iMe1JW2i+7/X1jGeo3Nt6h7E45oel0rznCVtaWO3c/5OPPJureFefbHXerWJOp5n42F/4/DikdqPz8UDdWryQ+/De308lQd63Y46pXjU7D/JHM3uA+s6jzpbtBXxqLdk/zX3Owf7stujPveFePSFePSFePTl0dbY30GwIX4=
+   eJzt2dFxgzAMgGHoBu0m7QZlg2SDZINm/4fGLbpTFckYglMH/u+OIxSXC5Zt2U7XAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAnPfr8XI9Pv77i+AnFsP4+fN6nLrf2EwdxK6OfuK69P+wDqlXGbOGTNlE+gXxqKM358hxZnksY+v3Vd07drdy8ZA+ds8h+Wuv+cnW71S7z5Vbo8/srf/ZNnwZ/56rB91Pasfjazwfun30k2g+9WauvbFK36/dP9Z8Zstsnpj7/o+KR+onJfO9Zyfvm9Z+6X3P47Xk0cN4HeVbKX927q1Rd7afbl30nq3l0Va+R23SL7x2r89T+yTe3PY03rt3zpvIPAN5tfNHjWdtmY6H3ReO+t6SY+t5vJQeh7y5v6wP0ngS9RX279fTO591jKTdprhEc62LKkNcYrrdRntNgyora+R7cyu5wKfHl5J1nx2PUoykrUvb9w5Zw0g8yQU+Xb9R7tW5WepRr9FK1imtrWVaosel3NpaYpGrw9QnpO1fOn/M088gHrfm1Ilu/15dpzgOTln7DD0Hw196XJqa55SOR7aszitznrF3S3O4l19sWS83kcfzbDzsbxxePKL9+Fw8UKakf+h9eK+NR/2AnDHfVDxK9p+iOZrO8yjziLoiHuXm7L/mfudgX/bxyM9tIR5tIR5tIR5tebY19jffAyK/
   </data>
  </layer>
  <layer name="Floor" width="100" height="100" visible="0">
@@ -127,7 +127,7 @@
    <property name="Static" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJztzgEJAAAIA7CD/Tsb4yhbgiUAAAAAAAAAAAAAAAAAAAAAAAAAwGfTDgAAAAAAAAAAAAAAAAAAAAAAAMAxC3+bAAQ=
+   eJztzgEJAAAIA7CD/Tsb44hbgiUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwx7QAAAAAAAMADC+j8AAQ=
   </data>
  </layer>
  <objectgroup name="Enemies">
@@ -609,7 +609,7 @@
     <property name="Passcode" value="icecream"/>
    </properties>
   </object>
-  <object id="180" name="Door" gid="4" x="1024" y="1344" width="16" height="16">
+  <object id="180" name="Door" gid="4" x="1024" y="1328" width="16" height="16" rotation="90">
    <properties>
     <property name="ID" type="int" value="4"/>
     <property name="Open" type="bool" value="false"/>
@@ -651,7 +651,7 @@
     <property name="Passcode" value=""/>
    </properties>
   </object>
-  <object id="223" name="Door" gid="4" x="1136" y="1344" width="16" height="16">
+  <object id="223" name="Door" gid="4" x="1136" y="1328" width="16" height="16" rotation="90">
    <properties>
     <property name="ID" type="int" value="5"/>
     <property name="Open" type="bool" value="false"/>
@@ -665,7 +665,7 @@
     <property name="Passcode" value=""/>
    </properties>
   </object>
-  <object id="237" name="Door" gid="4" x="1168" y="1344" width="16" height="16">
+  <object id="237" name="Door" gid="4" x="1168" y="1328" width="16" height="16" rotation="90">
    <properties>
     <property name="ID" type="int" value="6"/>
     <property name="Open" type="bool" value="false"/>
