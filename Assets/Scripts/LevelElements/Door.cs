@@ -54,8 +54,16 @@ namespace Assets.LevelElements
             }
         }
 
-        private void ResetListeners()
+        public void Toggle()
         {
+            if (_open)
+            {
+                CloseDoor();
+            }
+            else
+            {
+                OpenDoor();
+            }
         }
 
         // These two functions are for unlocking the door
@@ -85,12 +93,14 @@ namespace Assets.LevelElements
         {
             _doorOpen.SetActive(true);
             _doorClose.SetActive(false);
+            _open = true;
         }
 
         private void StateClose()
         {
             _doorClose.SetActive(true);
             _doorOpen.SetActive(false);
+            _open = false;
         }
     }
 }
