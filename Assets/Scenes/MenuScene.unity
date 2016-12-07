@@ -21130,29 +21130,9 @@ Prefab:
       propertyPath: _monitorPlayer
       value: 
       objectReference: {fileID: 1003184812}
-    - target: {fileID: 1000012626308994, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_Name
-      value: Managers
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1143285648 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012626308994, guid: fea230b2822d7284c8dc89e2dd54822c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1143285647}
---- !u!114 &1143285649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1143285648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cf1e411798682246b49033b2b807277, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1151327204 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011902588176, guid: 9d15796e3bc71bc4bbaf3b30d761ce2b,
