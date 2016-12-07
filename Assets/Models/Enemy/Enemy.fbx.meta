@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 77effeabd8b9d564aa3b0ca52d28aea7
-timeCreated: 1481077961
-=======
-guid: b058126c9a08d7e459e29e0a1b22bd55
-timeCreated: 1481078704
->>>>>>> e870cff4fc753196fe59ae6d4b1206aeb6b4d018
-licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -31,6 +24,7 @@ ModelImporter:
     4300000: Circle
     4300002: Icosphere.001
     4300004: Icosphere
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -55,7 +49,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -93,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

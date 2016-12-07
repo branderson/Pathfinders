@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 7c28071b4b5f9aa4a8f09179163a2718
-timeCreated: 1481077961
-=======
-guid: b587c8eec79f9d54a8ea86c6b5619447
-timeCreated: 1481078705
->>>>>>> e870cff4fc753196fe59ae6d4b1206aeb6b4d018
-licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -26,6 +19,7 @@ ModelImporter:
     3300002: Cube
     4300000: Cube
     4300002: BezierCircle
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,7 +44,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -88,7 +82,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
