@@ -10,7 +10,9 @@ namespace Assets.Enemies
         {
             EnemyAI ai = GetComponent<EnemyAI>();
             TiledLoaderProperties properties = GetComponent<TiledLoaderProperties>();
-            properties.TryGetInt("ID", out ai.ID);
+            int id;
+            properties.TryGetInt("ID", out id);
+            ai.ID = id;
             properties.TryGetInt("Destination", out ai.Destination);
             DestroyImmediate(this);
         }
