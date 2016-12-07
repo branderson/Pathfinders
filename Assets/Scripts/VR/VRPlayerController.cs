@@ -125,5 +125,10 @@ namespace Assets.VR
                 _controller.SimpleMove(move*_moveSpeed);
 	        }
 	    }
+
+	    public void Die()
+	    {
+            Debug.Log("Player died");
+	    }
 	}
 } 

@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 65989012054119672}
   - component: {fileID: 220362950328530542}
   - component: {fileID: 114697099701922006}
+  - component: {fileID: 54678728938031676}
+  - component: {fileID: 114784775456981364}
   m_Layer: 0
   m_Name: Waypoint
   m_TagString: Untagged
@@ -35,13 +37,28 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907778918023738}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.54627, y: 2.8482537, z: -34.820118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54678728938031676
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907778918023738}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!65 &65989012054119672
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -52,8 +69,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1.0000005, z: 5}
-  m_Center: {x: 0, y: 0, z: 2.5}
+  m_Size: {x: 0.01, y: 2, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114697099701922006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +85,17 @@ MonoBehaviour:
   ID: 0
   NextID: 0
   PreviousID: 0
+--- !u!114 &114784775456981364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907778918023738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44864a2cfabb0e24aa74afffdf3a6685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!220 &220362950328530542
 LightProbeGroup:
   m_ObjectHideFlags: 1

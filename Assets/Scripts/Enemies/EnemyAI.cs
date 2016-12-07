@@ -1,13 +1,12 @@
 using Assets.LevelElements;
 using Assets.Managers;
-using TiledLoader;
+using Assets.VR;
 using UnityEngine;
 
 namespace Assets.Enemies
 {
     public class EnemyAI : MonoBehaviour
     {
-
         public int ID;
         public int Destination;
 
@@ -26,10 +25,13 @@ namespace Assets.Enemies
 
         void Unpause() { pause = false; }
 
-        void Reverse() { forward = !forward; }
+        void Reverse()
+        {
+            forward = !forward;
+            ReachedWaypoint();
+        }
 
-        // Use this for initialization
-        void Start()
+        private void Start()
         {
             _destination = WaypointManager.Instance.GetWaypoint(Destination);
             character = GetComponent<CharacterController>();
@@ -39,18 +41,15 @@ namespace Assets.Enemies
             EventManager.Instance.StartListening("Reverse", Reverse);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            if (!pause) {
-                Patrol();
-                Vector3 move = _destination.GetComponent<Transform>().position - transform.position;
-                if (move.magnitude < .1)
-                    ReachedWaypoint();
-            }
+            if (pause) return;
+            Patrol();
         }
+
         private void ReachedWaypoint()
         {
+            Debug.Log("Enemy " + ID + " reached waypoint " + _destination.ID);
             if (forward)
             {
                 Destination = _destination.Next();
@@ -72,9 +71,22 @@ namespace Assets.Enemies
             _destination = WaypointManager.Instance.GetWaypoint(Destination);
         }
 
-        void Patrol()
+        public void WaypointTouched(Waypoint waypoint)
         {
-            Vector3 target = _destination.GetComponent<Transform>().position;
+            if (waypoint == _destination) ReachedWaypoint();
+        }
+
+        private void OnTriggerEnter(Collider collider)
+        {
+            // Collision on attack radius
+            VRPlayerController player = collider.GetComponent<VRPlayerController>();
+            if (player == null) return;
+            player.Die();
+        }
+
+        private void Patrol()
+        {
+            Vector3 target = _destination.transform.position;
       
             target.y = transform.position.y; // Keep waypoint at character's height
             Vector3 move_dir = target - transform.position;

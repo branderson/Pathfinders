@@ -184,6 +184,9 @@
   </object>
  </objectgroup>
  <objectgroup name="Waypoints" visible="0">
+  <properties>
+   <property name="Height" type="float" value="2"/>
+  </properties>
   <object id="28" name="Waypoint" gid="5" x="816" y="1488" width="16" height="16">
    <properties>
     <property name="ID" type="int" value="1"/>
