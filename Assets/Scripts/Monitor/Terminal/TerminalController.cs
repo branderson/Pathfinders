@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Assets.Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -317,6 +321,33 @@ namespace Assets.Monitor.Terminal
 
         private void DecipherString(string str)
         {
+            List<string> commands = str.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries).ToList();
+            if (commands.Count == 0) return;
+            string opcode = commands[0];
+            List<string> options = commands.Where(item => item.StartsWith("-")).ToList();
+            string target = commands.Last();
+            if (commands.IndexOf(target) == 1 || target.StartsWith("-"))
+            {
+                return;
+            }
+
+            switch (opcode)
+            {
+                case "door":
+//                    string pass
+                    if (options.Any(item => item == "-o" || item == "--open"))
+                    {
+                    }
+                    if (options.Any(item => item == "-o" || item == "--open"))
+                    {
+                    }
+                    break;
+                case "enemy":
+                    break;
+                default:
+                    Debug.Log("Unrecognized command");
+                    break;
+            }
             // Knock knock jokes
             if (_knockKnock == 0 && str.ToLower() == "knock knock")
             {

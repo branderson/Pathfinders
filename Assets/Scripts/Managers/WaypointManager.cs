@@ -29,7 +29,7 @@ namespace Assets.Managers
 
             foreach (Waypoint wp in wps)
             { 
-                _waypoints.Add(wp.ID, wp);
+                _waypoints[wp.ID] = wp;
             }
         }
 

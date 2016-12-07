@@ -29,7 +29,7 @@ namespace Assets.Managers
 
             foreach (Door door in doors)
             { 
-                _doors.Add(door.ID, door);
+                _doors[door.ID] = door;
             }
         }
 

@@ -116,10 +116,10 @@ namespace Assets.VR
 
 	        if (Input.GetButtonDown("VRInteract"))
 	        {
-	            Collider[] cols = Physics.OverlapSphere(transform.position, .5f);
+	            Collider[] cols = Physics.OverlapSphere(transform.position, 2f);
 	            foreach (Collider col in cols)
 	            {
-	                col.SendMessageUpwards("Interact");
+	                col.SendMessageUpwards("Interact", SendMessageOptions.DontRequireReceiver);
 	            }
 	        }
 

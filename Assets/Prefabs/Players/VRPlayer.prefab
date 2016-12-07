@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33000010161032162}
   - component: {fileID: 65000012796397192}
   - component: {fileID: 23000011926326800}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114000013168019748}
   - component: {fileID: 143000011270815546}
   - component: {fileID: 114000014098009732}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: VRPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 114000012564954218}
   - component: {fileID: 114000011114272432}
   - component: {fileID: 114000011397974440}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: VRCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08

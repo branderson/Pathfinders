@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 4176720148107418}
   - component: {fileID: 114941963520304674}
   - component: {fileID: 114668908893181466}
+  - component: {fileID: 114614433804463732}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Untagged
@@ -149,7 +150,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4b7a136a4aca166438c3437a27cadd35, type: 3}
+  - {fileID: 2100000, guid: 5ea0ef4218ac4aa4da5fd804adb5be84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -201,12 +202,24 @@ TextMesh:
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 0
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 4b7a136a4aca166438c3437a27cadd35, type: 3}
+  m_Font: {fileID: 12800000, guid: 86a5a3129d90bc9429eb6c69d7fcfdba, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
+--- !u!114 &114614433804463732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907778918023738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53307a124db751347845325b28379c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 
 --- !u!114 &114668908893181466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7233168794c1644489dc8c01b65838c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Switch
-  useID: 1
+  _name: 
+  useID: 0
 --- !u!114 &114941963520304674
 MonoBehaviour:
   m_ObjectHideFlags: 1

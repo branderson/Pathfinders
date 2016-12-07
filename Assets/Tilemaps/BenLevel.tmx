@@ -791,7 +791,7 @@
     <property name="ID" type="int" value="2"/>
    </properties>
   </object>
-  <object id="164" name="Switch" gid="22" x="784" y="1360" width="16" height="16">
+  <object id="164" name="Switch" gid="22" x="800" y="1360" width="16" height="16" rotation="-90">
    <properties>
     <property name="DoorIDs" value="5"/>
     <property name="ID" type="int" value="3"/>
@@ -803,13 +803,13 @@
     <property name="ID" type="int" value="4"/>
    </properties>
   </object>
-  <object id="249" name="Switch" gid="22" x="688" y="1408" width="16" height="16">
+  <object id="249" name="Switch" gid="22" x="704" y="1408" width="16" height="16" rotation="-90">
    <properties>
     <property name="DoorIDs" value="1"/>
     <property name="ID" type="int" value="1"/>
    </properties>
   </object>
-  <object id="251" name="Switch" gid="22" x="1424" y="1200" width="16" height="16">
+  <object id="251" name="Switch" gid="22" x="1424" y="1184" width="16" height="16" rotation="90">
    <properties>
     <property name="DoorIDs" value="11, 12, 13"/>
     <property name="ID" type="int" value="5"/>
