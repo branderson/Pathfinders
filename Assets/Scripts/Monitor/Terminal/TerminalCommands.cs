@@ -1,0 +1,16 @@
+using System.Collections.Generic;
+
+namespace Assets.Monitor.Terminal
+{
+    public class TerminalCommands
+    {
+        public static Dictionary<int, string> Commands = new Dictionary<int, string>()
+        {
+            { 1, "door [-o] [--open] id"},
+            { 2, "door [-c] [--close] id"},
+            { 3, "enemy [-s speed] [--speed speed] id\n +" +
+                 "  speed: 1 (slow), 2 (medium), or 3 (fast)"},
+            { 4, "enemy [-r] [--reverse] id" },
+        };
+    }
+}
