@@ -7,7 +7,6 @@ namespace Assets.LevelElements
     {
         [SerializeField] private string name = "";
         [SerializeField] private bool useID = true;
-        []
 
         private IAddressable _addressable;
 
@@ -17,7 +16,7 @@ namespace Assets.LevelElements
             if (useID)
                 gameObject.GetComponent<TextMesh>().text = name + _addressable.ID;
             else
-                gameObject.GetComponent<TextMesh>().text = ;
+                gameObject.GetComponent<TextMesh>().text = GetComponentInParent<LoadedText>().Text;
         }
 
         private void Update()
