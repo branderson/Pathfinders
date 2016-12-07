@@ -40,9 +40,6 @@ GameObject:
   - component: {fileID: 143230905654248206}
   - component: {fileID: 114955416614505050}
   - component: {fileID: 54433693425771116}
-  - component: {fileID: 114352450141385168}
-  - component: {fileID: 114601105462810490}
-  - component: {fileID: 114531837721602980}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -244,18 +241,6 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
---- !u!114 &114352450141385168
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211648041689396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7233168794c1644489dc8c01b65838c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _height: 1
 --- !u!114 &114423667465006924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,33 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7233168794c1644489dc8c01b65838c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _height: 4
---- !u!114 &114531837721602980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211648041689396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1439997357, guid: bfb97f010b942ed4eafd5658d4597b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114601105462810490
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211648041689396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 963484295, guid: bfb97f010b942ed4eafd5658d4597b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Prefab: {fileID: 1211648041689396}
-  TiledID: Enemy1
-  Layer: Enemies
-  _topLevel: 0
+  _name: 
+  useID: 1
 --- !u!114 &114955416614505050
 MonoBehaviour:
   m_ObjectHideFlags: 1

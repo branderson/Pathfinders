@@ -16,14 +16,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000013247641576}
-  - 33: {fileID: 33000011401353872}
-  - 23: {fileID: 23000012659519858}
-  - 65: {fileID: 65000011912335508}
-  - 65: {fileID: 65000013587515774}
-  - 220: {fileID: 220000010132655462}
+  - component: {fileID: 4000013247641576}
+  - component: {fileID: 33000011401353872}
+  - component: {fileID: 23000012659519858}
+  - component: {fileID: 65000011912335508}
+  - component: {fileID: 65000013587515774}
+  - component: {fileID: 220000010132655462}
   m_Layer: 0
   m_Name: PlusEndWall
   m_TagString: Untagged
@@ -40,10 +40,10 @@ Transform:
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
 --- !u!23 &23000012659519858
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -58,7 +58,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: df07425beb2980a459e489ce328da34b, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -66,7 +68,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89

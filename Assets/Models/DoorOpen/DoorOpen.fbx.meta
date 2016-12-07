@@ -15,10 +15,13 @@ ModelImporter:
     400008: Lamp
     2300000: BezierCircle
     2300002: Cube
+    2300004: //RootNode
     3300000: BezierCircle
     3300002: Cube
+    3300004: //RootNode
     4300000: Cube
     4300002: BezierCircle
+    4300004: DoorOpen
     9500000: //RootNode
   materials:
     importMaterials: 1

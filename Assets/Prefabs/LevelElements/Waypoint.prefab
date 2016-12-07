@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4176720148107418}
   - component: {fileID: 65989012054119672}
-  - component: {fileID: 220362950328530542}
   - component: {fileID: 114697099701922006}
   - component: {fileID: 54678728938031676}
   - component: {fileID: 114784775456981364}
@@ -96,15 +95,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44864a2cfabb0e24aa74afffdf3a6685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!220 &220362950328530542
-LightProbeGroup:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1907778918023738}
-  m_Enabled: 1
-  m_SourcePositions:
-  - {x: 1, y: 0, z: 3}
-  - {x: 1, y: 0, z: 1}
-  - {x: -1, y: 0, z: 3}
-  - {x: -1, y: 0, z: 1}
