@@ -14,9 +14,13 @@ namespace Assets.LevelElements
         {
             _addressable = GetComponentInParent<IAddressable>();
             if (useID)
+            {
                 gameObject.GetComponent<TextMesh>().text = _name + " " + _addressable.ID;
+            }
             else
+            {
                 gameObject.GetComponent<TextMesh>().text = GetComponentInParent<LoadedText>().Text;
+            }
         }
 
         private void Update()

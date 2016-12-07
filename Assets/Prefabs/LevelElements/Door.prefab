@@ -130,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1483520063306766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4176720148107418}
@@ -242,7 +242,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1460926728649542}
-  m_Mesh: {fileID: 4300004, guid: b587c8eec79f9d54a8ea86c6b5619447, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b2aff8012e6c3c446b8788dc3e2dd248, type: 3}
 --- !u!65 &65657033672549804
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -264,7 +264,7 @@ TextMesh:
   m_GameObject: {fileID: 1483520063306766}
   m_Text: 
   m_OffsetZ: 0
-  m_CharacterSize: 0.5
+  m_CharacterSize: 0.25
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
@@ -275,7 +275,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4b7a136a4aca166438c3437a27cadd35, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4291042856
 --- !u!114 &114533377377465154
 MonoBehaviour:
   m_ObjectHideFlags: 1

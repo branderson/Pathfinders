@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Assets.LevelElements
 {
-    public class Switch : CustomMonoBehaviour
+    public class Switch : CustomMonoBehaviour, IAddressable
     {
         [SerializeField] private int _id;
         public List<int> DoorIDs = new List<int>();

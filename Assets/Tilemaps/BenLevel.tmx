@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="323">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="322">
  <tileset firstgid="1" name="Tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
   <image source="../Sprites/Tilesheet.png" width="256" height="256"/>
   <tile id="0">
@@ -117,7 +117,7 @@
    <property name="Static" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt2dFxgzAMgGHoBu0m7QZlg2SDZINm/4fGLbpTFckYglMH/u+OIxSXC5Zt2U7XAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAnPfr8XI9Pv77i+AnFsP4+fN6nLrf2EwdxK6OfuK69P+wDqlXGbOGTNlE+gXxqKM358hxZnksY+v3Vd07drdy8ZA+ds8h+Wuv+cnW71S7z5Vbo8/srf/ZNnwZ/56rB91Pasfjazwfun30k2g+9WauvbFK36/dP9Z8Zstsnpj7/o+KR+onJfO9Zyfvm9Z+6X3P47Xk0cN4HeVbKX927q1Rd7afbl30nq3l0Va+R23SL7x2r89T+yTe3PY03rt3zpvIPAN5tfNHjWdtmY6H3ReO+t6SY+t5vJQeh7y5v6wP0ngS9RX279fTO591jKTdprhEc62LKkNcYrrdRntNgyora+R7cyu5wKfHl5J1nx2PUoykrUvb9w5Zw0g8yQU+Xb9R7tW5WepRr9FK1imtrWVaosel3NpaYpGrw9QnpO1fOn/M088gHrfm1Ilu/15dpzgOTln7DD0Hw196XJqa55SOR7aszitznrF3S3O4l19sWS83kcfzbDzsbxxePKL9+Fw8UKakf+h9eK+NR/2AnDHfVDxK9p+iOZrO8yjziLoiHuXm7L/mfudgX/bxyM9tIR5tIR5tIR5tebY19jffAyK/
+   eJzt2dFxwjAMgGHTDdpN2g2aDWAD2KDs/1DcRndClRwnxNSQ/7vLhTRujli2ZZuUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAyfvleLkcH//9RfATi2H8/Hk5juk3NlMHsWtjN3Fd+39Yh9SrjFlDoWwm/YJ4tLEz58hhZnksY+v3Vd07pL9K8ZA+dssh+Wur+cnW71S7L5Vbo89srf/ZNnwe/16qB91PWsfjazyf0jb6STSfejPX3lil77fuH2s+s2c2T8x9/3vFo3a+9+jkffPaL7/vabyWPLofr6N8K+VPzr016s7202cXvWdvebSX79Ga9Auv3evz1D6JN7c9jvdunfNmMs9AWev80eJZz0zHw+4LR31vyfHsebyWHoe8ub+sD/J4EvUV9u/Xs3M+6xhJu81xieZaZ1WGuMR0u432mgZVdp+u63cpcoFPjy816z47HuUYSVuXtu8dsoaReJILfLp+o9yrc7PUo16j1axTelvL9ESPS6W1tcSiVIe5T0jbPyd/zNPPIB5/zakT3f69us5xHJyy9hl6DoZrelyamufUjke2rM4rc56xdUtzuJdfbFkvN5HHy2w87G8cXjyi/fhSPFCnpn/ofXivjUf9gJwx31Q8avafojmazvOoc4+6Ih715uy/ln7nYF/2/sjPfSEefSEefSEefXm0NfY3KHkikA==
   </data>
  </layer>
  <layer name="Floor" width="100" height="100" visible="0">
@@ -735,28 +735,24 @@
     <property name="Passcode" value=""/>
    </properties>
   </object>
-  <object id="322" name="Door" gid="4" x="848" y="1248" width="16" height="16">
-   <properties>
-    <property name="ID" type="int" value="17"/>
-    <property name="Open" type="bool" value="true"/>
-    <property name="Passcode" value=""/>
-   </properties>
-  </object>
  </objectgroup>
  <objectgroup name="Passcode">
-  <object id="152" name="Passcode" gid="20" x="1056" y="1456" width="16" height="16">
+  <properties>
+   <property name="Height" type="float" value="2"/>
+  </properties>
+  <object id="152" name="Passcode" gid="20" x="1072" y="1440" width="16" height="16" rotation="90">
    <properties>
     <property name="Code" value="pizza"/>
     <property name="ID" type="int" value="2"/>
    </properties>
   </object>
-  <object id="222" name="Passcode" gid="20" x="1056" y="1312" width="16" height="16">
+  <object id="222" name="Passcode" gid="20" x="1056" y="1296" width="16" height="16">
    <properties>
     <property name="Code" value="frenchfry"/>
     <property name="ID" type="int" value="10"/>
    </properties>
   </object>
-  <object id="313" name="Passcode" gid="20" x="784" y="1216" width="16" height="16">
+  <object id="313" name="Passcode" gid="20" x="800" y="1200" width="16" height="16" rotation="90">
    <properties>
     <property name="Code" value="icecream"/>
     <property name="ID" type="int" value="16"/>
@@ -764,22 +760,25 @@
   </object>
  </objectgroup>
  <objectgroup name="Commands">
-  <object id="154" name="Command" gid="21" x="912" y="1456" width="16" height="16">
+  <properties>
+   <property name="Height" type="float" value="2"/>
+  </properties>
+  <object id="154" name="Command" gid="21" x="928" y="1440" width="16" height="16" rotation="90">
    <properties>
     <property name="ID" type="int" value="1"/>
    </properties>
   </object>
-  <object id="197" name="Command" gid="21" x="1392" y="1168" width="16" height="16">
+  <object id="197" name="Command" gid="21" x="1392" y="1152" width="16" height="16">
    <properties>
     <property name="ID" type="int" value="3"/>
    </properties>
   </object>
-  <object id="238" name="Command" gid="21" x="1184" y="1344" width="16" height="16">
+  <object id="238" name="Command" gid="21" x="1200" y="1328" width="16" height="16" rotation="90">
    <properties>
     <property name="ID" type="int" value="2"/>
    </properties>
   </object>
-  <object id="314" name="Command" gid="21" x="848" y="1104" width="16" height="16">
+  <object id="314" name="Command" gid="21" x="864" y="1088" width="16" height="16" rotation="90">
    <properties>
     <property name="ID" type="int" value="4"/>
    </properties>

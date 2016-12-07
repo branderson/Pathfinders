@@ -11,8 +11,8 @@ namespace Assets.LevelElements
             LoadedText comp = GetComponent<LoadedText>();
             TiledLoaderProperties properties = GetComponent<TiledLoaderProperties>();
             string text;
-            properties.TryGetString("Passcode", out text);
-            comp.Text = text;
+            properties.TryGetString("Code", out text);
+            comp.Text = "Door: " + "\n" + "Code: " + text;
             DestroyImmediate(this);
         }
     }
