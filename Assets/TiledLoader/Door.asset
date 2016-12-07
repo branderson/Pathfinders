@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 1151050004, guid: bfb97f010b942ed4eafd5658d4597b41, type: 3}
   m_Name: Door
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 1907778918023738, guid: 056ff9bc8b8b5294f9995fa4d1ee6bd2, type: 2}
+  Prefab: {fileID: 1907778918023738, guid: 0c547a9f156cc1a4db24556489249aab, type: 2}
   TiledID: Door
