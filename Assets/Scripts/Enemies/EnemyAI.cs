@@ -1,13 +1,14 @@
 using Assets.LevelElements;
 using Assets.Managers;
+using Assets.Utility;
 using Assets.VR;
 using UnityEngine;
 
 namespace Assets.Enemies
 {
-    public class EnemyAI : MonoBehaviour
+    public class EnemyAI : CustomMonoBehaviour, IAddressable
     {
-        public int ID;
+        [SerializeField] private int _id;
         public int Destination;
 
         private Waypoint _destination;            // Current waypoint
@@ -31,6 +32,12 @@ namespace Assets.Enemies
             ReachedWaypoint();
         }
 
+        public int ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
         private void Start()
         {
             _destination = WaypointManager.Instance.GetWaypoint(Destination);
@@ -49,7 +56,7 @@ namespace Assets.Enemies
 
         private void ReachedWaypoint()
         {
-//            Debug.Log("Enemy " + ID + " reached waypoint " + _destination.ID);
+//            Debug.Log("Enemy " + _id + " reached waypoint " + _destination._id);
             if (forward)
             {
                 Destination = _destination.Next();
