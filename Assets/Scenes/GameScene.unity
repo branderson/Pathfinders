@@ -7926,11 +7926,6 @@ MonoBehaviour:
   TiledID: TWall
   Layer: Map
   _topLevel: 0
---- !u!20 &345137653 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 20000011904387622, guid: 648e9eb010ff5be4185c81df2aa78fc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1561480967}
 --- !u!1001 &347857979
 Prefab:
   m_ObjectHideFlags: 0
@@ -21397,7 +21392,7 @@ Transform:
   - {fileID: 337452593}
   - {fileID: 391291629}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &863497617
 Prefab:
@@ -45841,12 +45836,6 @@ MonoBehaviour:
   TiledID: StraightWall
   Layer: Map
   _topLevel: 0
---- !u!114 &1865613265 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000013168019748, guid: 648e9eb010ff5be4185c81df2aa78fc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1561480967}
-  m_Script: {fileID: 11500000, guid: 6624e143593fa9d45be3c89476c0248d, type: 3}
 --- !u!1001 &1868177306
 Prefab:
   m_ObjectHideFlags: 0
@@ -46709,78 +46698,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d15796e3bc71bc4bbaf3b30d761ce2b, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1910127505
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000014075203016, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 8.619398
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014075203016, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -9.869686
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014075203016, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 8.438477
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014075203016, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014075203016, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014075203016, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014075203016, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014075203016, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012334718702, guid: fea230b2822d7284c8dc89e2dd54822c,
-        type: 2}
-      propertyPath: _vrCamera
-      value: 
-      objectReference: {fileID: 345137653}
-    - target: {fileID: 114000012334718702, guid: fea230b2822d7284c8dc89e2dd54822c,
-        type: 2}
-      propertyPath: _monitorCamera
-      value: 
-      objectReference: {fileID: 2042778448}
-    - target: {fileID: 114000012334718702, guid: fea230b2822d7284c8dc89e2dd54822c,
-        type: 2}
-      propertyPath: _vrPlayer
-      value: 
-      objectReference: {fileID: 1865613265}
-    - target: {fileID: 114000012334718702, guid: fea230b2822d7284c8dc89e2dd54822c,
-        type: 2}
-      propertyPath: _monitorPlayer
-      value: 
-      objectReference: {fileID: 1935616027}
-    - target: {fileID: 114000012334718702, guid: fea230b2822d7284c8dc89e2dd54822c,
-        type: 2}
-      propertyPath: _displayConfiguration
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012334718702, guid: fea230b2822d7284c8dc89e2dd54822c,
-        type: 2}
-      propertyPath: _inputConfiguration
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: fea230b2822d7284c8dc89e2dd54822c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1917221889 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1907778918023738, guid: a313b98d0c307a74f80b8af74f5224a7,
@@ -47165,12 +47082,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d15796e3bc71bc4bbaf3b30d761ce2b, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1935616027 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000013142045170, guid: d31e8b89a400c444898ecc944f749aad,
-    type: 2}
-  m_PrefabInternal: {fileID: 833940039}
-  m_Script: {fileID: 11500000, guid: 27adedf409fc69d4a8345225fa149835, type: 3}
 --- !u!1001 &1936026198
 Prefab:
   m_ObjectHideFlags: 0
@@ -49407,11 +49318,6 @@ MonoBehaviour:
   TiledID: StraightWall
   Layer: Map
   _topLevel: 0
---- !u!20 &2042778448 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 20000012251602280, guid: d31e8b89a400c444898ecc944f749aad,
-    type: 2}
-  m_PrefabInternal: {fileID: 833940039}
 --- !u!1001 &2044836542
 Prefab:
   m_ObjectHideFlags: 0

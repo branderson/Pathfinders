@@ -24,6 +24,8 @@ namespace Assets.LevelElements
 
         private void OnTriggerEnter(Collider col)
         {
+            print(col.gameObject.name);
+            if (col.gameObject.name != "Model") return;
             EnemyAI enemy = col.GetComponentInParent<EnemyAI>();
             if (enemy == null) return;
             enemy.WaypointTouched(this);

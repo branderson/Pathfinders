@@ -49,7 +49,7 @@ namespace Assets.Enemies
 
         private void ReachedWaypoint()
         {
-            Debug.Log("Enemy " + ID + " reached waypoint " + _destination.ID);
+//            Debug.Log("Enemy " + ID + " reached waypoint " + _destination.ID);
             if (forward)
             {
                 Destination = _destination.Next();
@@ -79,7 +79,7 @@ namespace Assets.Enemies
         private void OnTriggerEnter(Collider collider)
         {
             // Collision on attack radius
-            VRPlayerController player = collider.GetComponent<VRPlayerController>();
+            VRPlayerController player = collider.GetComponentInParent<VRPlayerController>();
             if (player == null) return;
             player.Die();
         }
