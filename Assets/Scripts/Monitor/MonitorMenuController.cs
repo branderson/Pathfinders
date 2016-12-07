@@ -85,45 +85,36 @@ namespace Assets.Monitor
 
         public void OpenCommandMenu()
         {
-            if (_canChangeState)
-            {
-                _state = MenuState.Command;
-                _monitorPlayer.AllowControl = false;
-                _monitorPlayer.LockedControl = true;
-                _pauseMenu.Close();
-                _commandMenu.Open();
-            }
+            _state = MenuState.Command;
+            _monitorPlayer.AllowControl = false;
+            _monitorPlayer.LockedControl = true;
+            _pauseMenu.Close();
+            _commandMenu.Open();
         }
 
         public void OpenPauseMenu()
         {
-            if (_canChangeState)
-            {
-                _state = MenuState.Pause;
-                _vrMenu.OpenPauseMenu();
-                _monitorPlayer.AllowControl = false;
-                _monitorPlayer.LockedControl = true;
-                _commandMenu.Close();
-                _pauseMenu.Open();
-                EventManager.Instance.TriggerEvent("Pause");
-            }
+            _state = MenuState.Pause;
+            _vrMenu.OpenPauseMenu();
+            _monitorPlayer.AllowControl = false;
+            _monitorPlayer.LockedControl = true;
+            _commandMenu.Close();
+            _pauseMenu.Open();
+            EventManager.Instance.TriggerEvent("Pause");
         }
 
         public void CloseMenu()
         {
-            if (_canChangeState)
+            if (_state == MenuState.Pause)
             {
-                if (_state == MenuState.Pause)
-                {
-                    EventManager.Instance.TriggerEvent("Unpause");
-                }
-                _state = MenuState.None;
-                _vrMenu.CloseMenu();
-                _monitorPlayer.LockedControl = false;
-                _monitorPlayer.AllowControl = true;
-                _commandMenu.Close();
-                _pauseMenu.Close();
+                EventManager.Instance.TriggerEvent("Unpause");
             }
+            _state = MenuState.None;
+            _vrMenu.CloseMenu();
+            _monitorPlayer.LockedControl = false;
+            _monitorPlayer.AllowControl = true;
+            _commandMenu.Close();
+            _pauseMenu.Close();
         }
 
         public void GoToScene(string scene)

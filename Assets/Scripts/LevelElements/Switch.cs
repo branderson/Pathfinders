@@ -26,5 +26,10 @@ namespace Assets.LevelElements
             }
             _on = !_on;
         }
+
+        public void Interact()
+        {
+            Toggle();
+        }
     }
 }

@@ -817,7 +817,7 @@
   </object>
   <object id="315" name="Switch" gid="22" x="832" y="1088" width="16" height="16">
    <properties>
-    <property name="DoorIDs" type="int" value="131415"/>
+    <property name="DoorIDs" value="13, 14, 15"/>
     <property name="ID" type="int" value="6"/>
    </properties>
   </object>

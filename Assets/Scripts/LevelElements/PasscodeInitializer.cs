@@ -11,8 +11,10 @@ namespace Assets.LevelElements
             LoadedText comp = GetComponent<LoadedText>();
             TiledLoaderProperties properties = GetComponent<TiledLoaderProperties>();
             string text;
+            int id;
             properties.TryGetString("Code", out text);
-            comp.Text = "Door: " + "\n" + "Code: " + text;
+            properties.TryGetInt("ID", out id);
+            comp.Text = "Door: " + id +  "\n" + "Code: " + text;
             DestroyImmediate(this);
         }
     }

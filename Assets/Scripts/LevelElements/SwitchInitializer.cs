@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using TiledLoader;
 using UnityEngine;
 
@@ -15,6 +17,7 @@ namespace Assets.LevelElements
             properties.TryGetInt("ID", out id);
             properties.TryGetString("DoorIDs", out doors);
             sw.ID = id;
+            sw.DoorIDs = doors.Split(new[] {", "}, StringSplitOptions.RemoveEmptyEntries).Select(item => int.Parse(item)).ToList();
             DestroyImmediate(this);
         }
     }

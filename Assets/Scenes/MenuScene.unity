@@ -20913,6 +20913,17 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: -868.36847
       objectReference: {fileID: 0}
+    - target: {fileID: 114424007539383578, guid: 6a7fc373ffb52fa409c23e14f3fcf3cf,
+        type: 2}
+      propertyPath: _canChangeState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114749139470585404, guid: 6a7fc373ffb52fa409c23e14f3fcf3cf,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7bd10c1384241e248a9837d9fb56356a,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a7fc373ffb52fa409c23e14f3fcf3cf, type: 2}
   m_IsPrefabParent: 0
@@ -29740,7 +29751,7 @@ Prefab:
     - target: {fileID: 224791123445232152, guid: 936f2a55a9d7ced4c83f6cc5deb44f00,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 2048
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 224791123445232152, guid: 936f2a55a9d7ced4c83f6cc5deb44f00,
         type: 2}

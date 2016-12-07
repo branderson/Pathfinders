@@ -114,6 +114,15 @@ namespace Assets.VR
 	            }
 	        }
 
+	        if (Input.GetButtonDown("VRInteract"))
+	        {
+	            Collider[] cols = Physics.OverlapSphere(transform.position, .5f);
+	            foreach (Collider col in cols)
+	            {
+	                col.SendMessageUpwards("Interact");
+	            }
+	        }
+
             // Rotate movement vector by VR camera's y rotation
             Vector3 move = new Vector3(hor, 0, ver);
 	        move = Quaternion.Euler(0, _cameraTransform.localRotation.eulerAngles.y, 0) * transform.rotation * move;
