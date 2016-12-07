@@ -1,7 +1,7 @@
-﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using Assets.LevelElements;
 using Assets.Utility;
+using UnityEngine.SceneManagement;
 
 
 namespace Assets.Managers
@@ -12,16 +12,31 @@ namespace Assets.Managers
 
         protected WaypointManager() { }
 
-        public Waypoint GetWaypoint(int id) { if (id == 0) return null; return _waypoints[id]; }
+        private void Start()
+        {
+            SceneManager.sceneLoaded += OnLevelLoad;
+        }
 
-        private void Awake() 
+        private void OnLevelLoad(Scene scene, LoadSceneMode mode) 
+        {
+            LoadWaypoints();
+        }
+
+        private void LoadWaypoints()
         {
             _waypoints = new Dictionary<int, Waypoint>();
-            Object[] wps = Object.FindObjectsOfType(typeof(Waypoint));
-            for (int x = 0; x < wps.Length; x++) {
-                Waypoint wp = (Waypoint) wps[x];
+            Waypoint[] wps = FindObjectsOfType<Waypoint>();
+
+            foreach (Waypoint wp in wps)
+            { 
                 _waypoints.Add(wp.ID, wp);
             }
+        }
+
+        public Waypoint GetWaypoint(int id)
+        {
+            if (_waypoints == null) LoadWaypoints();
+            return id == 0 ? null : _waypoints[id];
         }
     }
 }

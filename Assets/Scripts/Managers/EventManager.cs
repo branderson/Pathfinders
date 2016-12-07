@@ -26,7 +26,7 @@ namespace Assets.Managers
          
         protected EventManager() { }
 
-		protected void Start()
+		protected void Awake()
 		{
             Initialize();
 		}
