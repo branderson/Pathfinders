@@ -16,6 +16,7 @@ namespace Assets.LevelElements
             properties.TryGetInt("ID", out id);
             properties.TryGetBool("Open", out open);
             properties.TryGetString("Passcode", out passcode);
+            passcode = passcode.Replace(" ", "");
             door.ID = id;
             door.Open = open;
             door.Passcode = passcode;

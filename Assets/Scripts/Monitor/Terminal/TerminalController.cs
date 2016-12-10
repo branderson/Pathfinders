@@ -321,25 +321,71 @@ namespace Assets.Monitor.Terminal
 
         private void DecipherString(string str)
         {
-            List<string> commands = str.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries).ToList();
-            if (commands.Count == 0) return;
-            string opcode = commands[0];
-            List<string> options = commands.Where(item => item.StartsWith("-")).ToList();
-            string target = commands.Last();
-            if (commands.IndexOf(target) == 1 || target.StartsWith("-"))
+            List<string> words = str.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries).ToList();
+            if (words.Count <= 2) return;
+
+            // Get opcode
+            string opcode = words[0];
+            words.Remove(opcode);
+            Debug.Log("Parsed opcode: " + opcode);
+
+            // Get options
+            List<string> options = words.Where(item => item.StartsWith("-")).ToList();
+            foreach (string option in options)
+            {
+                Debug.Log("Parsed option: " + option);
+            }
+            string target = words.Last();
+            if (target.StartsWith("-"))
             {
                 return;
             }
+            words.Remove(target);
+            Debug.Log("Parsed target: " + target);
 
+            // Get option values
+            Dictionary<string, string> vals = new Dictionary<string, string>();
+            foreach (string option in options)
+            {
+                int optionIndex = words.IndexOf(option);
+                if (words.Count > optionIndex + 1)
+                {
+                    if (!words[optionIndex + 1].StartsWith("-"))
+                    {
+                        vals[option] = words[optionIndex + 1];
+                        Debug.Log("Parsed value for option " + option + ": " + vals[option]);
+                    }
+                }
+                else
+                {
+                    Debug.Log("Did not parse value for option " + option);
+                    vals[option] = "";
+                }
+            }
+
+            // Parse command
             switch (opcode)
             {
                 case "door":
-//                    string pass
-                    if (options.Any(item => item == "-o" || item == "--open"))
+                    // Look for and retrieve passcode
+                    string passcode = "";
+                    if (options.Contains("-p"))
                     {
+                        passcode = vals["-p"];
+                    }
+                    else if (options.Contains("--passcode"))
+                    {
+                        passcode = vals["--passcode"];
                     }
                     if (options.Any(item => item == "-o" || item == "--open"))
                     {
+                        Debug.Log("OpenDoor" + target + passcode);
+                        EventManager.Instance.TriggerEvent("OpenDoor" + target + passcode);
+                    }
+                    if (options.Any(item => item == "-c" || item == "--close"))
+                    {
+                        Debug.Log("CloseDoor" + target + passcode);
+                        EventManager.Instance.TriggerEvent("CloseDoor" + target + passcode);
                     }
                     break;
                 case "enemy":

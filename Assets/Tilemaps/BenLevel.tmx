@@ -704,7 +704,7 @@
    <properties>
     <property name="ID" type="int" value="2"/>
     <property name="Open" type="bool" value="false"/>
-    <property name="Passcode" value="pizza"/>
+    <property name="Passcode" value=""/>
    </properties>
   </object>
   <object id="250" name="Door" gid="4" x="1104" y="1472" width="16" height="16">
@@ -743,7 +743,7 @@
   <object id="152" name="Passcode" gid="20" x="1072" y="1440" width="16" height="16" rotation="90">
    <properties>
     <property name="Code" value="pizza"/>
-    <property name="ID" type="int" value="2"/>
+    <property name="ID" type="int" value="3"/>
    </properties>
   </object>
   <object id="222" name="Passcode" gid="20" x="1056" y="1296" width="16" height="16">
@@ -791,7 +791,7 @@
     <property name="ID" type="int" value="2"/>
    </properties>
   </object>
-  <object id="164" name="Switch" gid="22" x="800" y="1360" width="16" height="16" rotation="-90">
+  <object id="164" name="Switch" gid="22" x="784" y="1344" width="16" height="16" rotation="90">
    <properties>
     <property name="DoorIDs" value="5"/>
     <property name="ID" type="int" value="3"/>
@@ -803,9 +803,9 @@
     <property name="ID" type="int" value="4"/>
    </properties>
   </object>
-  <object id="249" name="Switch" gid="22" x="704" y="1408" width="16" height="16" rotation="-90">
+  <object id="249" name="Switch" gid="22" x="688" y="1392" width="16" height="16" rotation="90">
    <properties>
-    <property name="DoorIDs" value="1"/>
+    <property name="DoorIDs" value="2"/>
     <property name="ID" type="int" value="1"/>
    </properties>
   </object>

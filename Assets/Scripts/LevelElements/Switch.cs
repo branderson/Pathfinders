@@ -18,6 +18,14 @@ namespace Assets.LevelElements
             set { _id = value; }
         }
 
+        private void Start()
+        {
+            foreach (int id in DoorIDs)
+            {
+                DoorManager.Instance.GetDoor(id).SwitchControlled = true;
+            }
+        }
+
         public void Toggle()
         {
             foreach (int id in DoorIDs)
