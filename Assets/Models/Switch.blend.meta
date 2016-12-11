@@ -1,32 +1,16 @@
 fileFormatVersion: 2
-guid: 4cd640292931c004a9303c31b7fdcf5d
+guid: 3eea4a38d2a41144caba0d2c4ac424ee
+timeCreated: 1481492160
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: BezierCircle
-    100002: //RootNode
-    100004: Camera
-    100006: Lamp
-    100008: Sphere
-    100010: Sphere.001
-    400000: BezierCircle
-    400002: //RootNode
-    400004: Camera
-    400006: Lamp
-    400008: Sphere
-    400010: Sphere.001
-    2300000: BezierCircle
-    2300002: Sphere
-    2300004: Sphere.001
-    2300006: //RootNode
-    3300000: BezierCircle
-    3300002: Sphere
-    3300004: Sphere.001
-    3300006: //RootNode
-    4300000: Sphere.001
-    4300002: BezierCircle
-    4300004: Sphere
-    4300006: Camera
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Switch
+    7400000: Default Take
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -52,7 +36,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
