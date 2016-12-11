@@ -10,8 +10,9 @@ namespace Assets.LevelElements
         [SerializeField] private GameObject _doorOpen;
         [SerializeField] private GameObject _doorClose;
 
-        private string _passcode = "";
-        private bool _open = false;
+        [SerializeField] private string _passcode = "";
+        [SerializeField] private bool _open = false;
+        [SerializeField] private bool _switchControlled = false;
 
         private Collider _collider;
 
@@ -31,18 +32,17 @@ namespace Assets.LevelElements
             set { _passcode = value; }
         }
 
+        public bool SwitchControlled
+        {
+            set { _switchControlled = value; }
+        }
+
         public void Start()
         {
-            if (_passcode == "")
+            if (!_switchControlled)
             {
-                // Not locked
-                EventManager.Instance.StartListening("OpenDoor " + _id + " " + _passcode, OpenDoor);
-                EventManager.Instance.StartListening("CloseDoor " + _id + " " + _passcode, OpenDoor);
-            }
-            else
-            {
-                EventManager.Instance.StartListening("OpenDoor " + _id, OpenDoor);
-                EventManager.Instance.StartListening("CloseDoor " + _id, OpenDoor);
+                EventManager.Instance.StartListening("OpenDoor" + _id + _passcode, OpenDoor);
+                EventManager.Instance.StartListening("CloseDoor" + _id + _passcode, CloseDoor);
             }
             if (_open)
             {
@@ -69,22 +69,22 @@ namespace Assets.LevelElements
         // These two functions are for unlocking the door
         private void OpenDoor()
         {
-            if (_passcode != "")
+            if (_passcode != "" && !_switchControlled)
             {
                 // Unlock
-                EventManager.Instance.StartListening("OpenDoor " + _id, OpenDoor);
-                EventManager.Instance.StartListening("CloseDoor " + _id, CloseDoor);
+                EventManager.Instance.StartListening("OpenDoor" + _id, OpenDoor);
+                EventManager.Instance.StartListening("CloseDoor" + _id, CloseDoor);
             }
             StateOpen();
         }
 
         private void CloseDoor()
         {
-            if (_passcode != "")
+            if (_passcode != "" && !_switchControlled)
             {
                 // Unlock
-                EventManager.Instance.StartListening("OpenDoor " + _id, OpenDoor);
-                EventManager.Instance.StartListening("CloseDoor " + _id, CloseDoor);
+                EventManager.Instance.StartListening("OpenDoor" + _id, OpenDoor);
+                EventManager.Instance.StartListening("CloseDoor" + _id, CloseDoor);
             }
             StateClose();
         }
