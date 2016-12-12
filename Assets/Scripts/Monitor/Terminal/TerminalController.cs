@@ -46,12 +46,22 @@ namespace Assets.Monitor.Terminal
 
         public void AddScriptInfo(string text)
         {
+            if (_scripts == null)
+            {
+                _scripts = new List<string>();
+            }
             _scripts.Add(text);
+            Debug.Log("Added command " + text);
         }
 
         public void AddPasscode(int id, string code)
         {
+            if (_passcodes == null)
+            {
+                _passcodes = new Dictionary<int, string>();
+            }
             _passcodes[id] = code;
+            Debug.Log("Added passcode " + code);
         }
 
         public void Start()
@@ -67,9 +77,6 @@ namespace Assets.Monitor.Terminal
 
             _knockKnock = 0;
             _text.text = _promptString;
-
-            _scripts = new List<string>();
-            _passcodes = new Dictionary<int, string>();
 
             TypeString("Type \"passcodes\" to list all learned door codes.\n" +
                        "Type \"man\" to list all learned commands and their usages.\n", false);

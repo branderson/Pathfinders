@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="325">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="327">
  <tileset firstgid="1" name="Tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
   <image source="../Sprites/Tilesheet.png" width="256" height="256"/>
   <tile id="0">
@@ -117,7 +117,7 @@
    <property name="Static" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt2lFygyAQgGHSG6Q3aW/Q3CC5QbxBvf9DQ+vOkM2CYDRu9f9mHGOltrLCAiYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg2cdte7ttn2v/I/iNxWn4/BWIydoOI8d4Lal/6bNOhbJY3kHtsS7i4Qvx8IV4+EI8fCEevhAPX3Q8ZB4ytjGPX4aOR207oT0tQ+r1O9TNz4/q9zCv2nZxaSyPaXT9HpNzl/CoFI/a3FParmHf+ak1f5TKzdFm9tb+9DPcDz8v1UPaTpaOx/ew78I+2knufce7Orb6qvT80u1jzmt6pvNE6/2/Kh57eR8j9xvfzcb77YZjyaPn4TiXb6V8Z5ybo+50O9263H16y6Ne/o+l5dZFOrUfWyexxrbX4dyzY95IxhlblNad9ClTn7+l88cS1/JmzrpL46G/tyU5aY5ty3nc6qNy95uWscb+Mj/oQ76t8P26spZcfTA+W3GMccmNtfqkDHF5pNdwY/3k1pqkvuP5c7iv32f/Pv5Ya1Q18z7rXZU86xJba5M5jMRzy7lgCiseudyb5mapx3SOVtP3eZvLeBKf6bSfl30uFqU6jG1Cnv0+2H1eeg3i8ailTtLn36rrGMeTUVZfIx2D4V7aL42Nc2r7I102zSst19i7qTncyi+6rJWbyONlOh76HYcVj9x6fCkeqFPTPtJ1eOsZz7UDcka7sXjUrD/lxmjPrlPu0SvqinjUa1l/Lb3n2Ou67JrIz74QD1+Ihy/Ew5f/Nsf+AQn4JLw=
+   eJzt2lFygjAQgOHYG9ibtDeoN9AbyA30/g81HXYmrpuQKJEt/N8Mg5SUkWySJcEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAZ1+37eO2fS/9RfAXi8P4+ScQk6XtJo7xXlL/MmYdCmXR307tsSzi4Qvx8IV4+EI8fCEevhAPX3Q8ZB4ytTGP70PHo7af0J/6kHq9hLr5+V79H+ZV2y9OjeXxHF2/++TcKTwqxaM295S2c9h2fmrNH6Vyc/SZrfU/3Yav499L9ZD2k97xuIz7IWyjn+Ted3yqY2usSs/37h9zXtMznSda7/9d8djK+xi53/huNt7vMB5LHj2Ox7l8K+UH49wcdaf76drl7tNbHvXyPXrLrYsMaj+1TmI9257Hc68+80bynLFGad3JmPJs++udP3pcy5s56y6Nh/7dluSkObY153FrjMrdb1rGevaX+cE15PsKv68ra8nVO+OzFccYl9yz1jUpw/r8I72GG+smt9Yk9R3PH8N9/c7xHWCvUdXM+6x3VdLO07avN6t/rDkftLLikcu9aW6WOkznaDVjn7e5jCexTafjvOxzsSjVYWzvMn+/BnvM+w73OR/3Wtpo2v6tuo5xPBhl9TWIR146Lk0949SOR7psmldarrF1z+ZwK7/oslZuIoeX6XjodxxWPHLr8aV4oE5N/0jX4a02nusH5Ix2U/GoWX/KPaO9uk65Re+oK+JRr2X9tfSeY6vrsksiP/tCPHwhHr4QD1/+2xz7F7u8JeI=
   </data>
  </layer>
  <layer name="Floor" width="100" height="100" visible="0">
@@ -191,7 +191,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Waypoints" visible="0">
+ <objectgroup name="Waypoints">
   <properties>
    <property name="Height" type="float" value="2"/>
   </properties>
@@ -275,7 +275,7 @@
   <object id="241" name="Waypoint" gid="5" x="1152" y="1344" width="16" height="16">
    <properties>
     <property name="ID" type="int" value="15"/>
-    <property name="NextID" type="int" value="0"/>
+    <property name="NextID" type="int" value="100"/>
     <property name="PreviousID" type="int" value="14"/>
    </properties>
   </object>
@@ -622,6 +622,13 @@
     <property name="PreviousID" type="int" value="60"/>
    </properties>
   </object>
+  <object id="326" name="Waypoint" gid="5" x="1040" y="1344" width="16" height="16">
+   <properties>
+    <property name="ID" type="int" value="100"/>
+    <property name="NextID" type="int" value="0"/>
+    <property name="PreviousID" type="int" value="15"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Doors">
   <object id="150" name="Door" gid="4" x="736" y="1392" width="16" height="16">
@@ -694,7 +701,7 @@
     <property name="Passcode" value=""/>
    </properties>
   </object>
-  <object id="239" name="Door" gid="4" x="1152" y="1360" width="16" height="16">
+  <object id="239" name="Door" gid="4" x="1152" y="1392" width="16" height="16">
    <properties>
     <property name="ID" type="int" value="8"/>
     <property name="Open" type="bool" value="true"/>
@@ -788,7 +795,7 @@
     <property name="ID" type="int" value="3"/>
    </properties>
   </object>
-  <object id="238" name="Command" gid="21" x="1200" y="1328" width="16" height="16" rotation="90">
+  <object id="238" name="Command" gid="21" x="1216" y="1328" width="16" height="16" rotation="90">
    <properties>
     <property name="ID" type="int" value="2"/>
    </properties>

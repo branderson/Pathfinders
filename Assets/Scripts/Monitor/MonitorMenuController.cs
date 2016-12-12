@@ -94,6 +94,7 @@ namespace Assets.Monitor
 
         public void OpenPauseMenu()
         {
+            Cursor.visible = true;
             _state = MenuState.Pause;
             _vrMenu.OpenPauseMenu();
             _monitorPlayer.AllowControl = false;
@@ -105,6 +106,7 @@ namespace Assets.Monitor
 
         public void CloseMenu()
         {
+            Cursor.visible = false;
             if (_state == MenuState.Pause)
             {
                 EventManager.Instance.TriggerEvent("Unpause");
