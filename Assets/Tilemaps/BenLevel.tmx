@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="322">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="323">
  <tileset firstgid="1" name="Tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
   <image source="../Sprites/Tilesheet.png" width="256" height="256"/>
   <tile id="0">
@@ -117,7 +117,7 @@
    <property name="Static" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt2dFxwjAMgGHTDdpN2g2aDWAD2KDs/1DcRndClRwnxNSQ/7vLhTRujli2ZZuUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAyfvleLkcH//9RfATi2H8/Hk5juk3NlMHsWtjN3Fd+39Yh9SrjFlDoWwm/YJ4tLEz58hhZnksY+v3Vd07pL9K8ZA+dssh+Wur+cnW71S7L5Vbo89srf/ZNnwe/16qB91PWsfjazyf0jb6STSfejPX3lil77fuH2s+s2c2T8x9/3vFo3a+9+jkffPaL7/vabyWPLofr6N8K+VPzr016s7202cXvWdvebSX79Ga9Auv3evz1D6JN7c9jvdunfNmMs9AWev80eJZz0zHw+4LR31vyfHsebyWHoe8ub+sD/J4EvUV9u/Xs3M+6xhJu81xieZaZ1WGuMR0u432mgZVdp+u63cpcoFPjy816z47HuUYSVuXtu8dsoaReJILfLp+o9yrc7PUo16j1axTelvL9ESPS6W1tcSiVIe5T0jbPyd/zNPPIB5/zakT3f69us5xHJyy9hl6DoZrelyamufUjke2rM4rc56xdUtzuJdfbFkvN5HHy2w87G8cXjyi/fhSPFCnpn/ofXivjUf9gJwx31Q8avafojmazvOoc4+6Ih715uy/ln7nYF/2/sjPfSEefSEefSEefXm0NfY3KHkikA==
+   eJzt2lFygjAQgOHYG7Q3aW9Qb6A3kBvI/R9qWnYmrpsQkMgW/m+GQUqGSpZkk2AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAs8/b9nbbvtb+IviNxXH4/B2IydoOa38B3JF4SJ91LJRFewe1x7qIhy/Ewxfi4Qvx8IV4+EI8fNHxkHnI2MY8vg0dj9p2QntqQ+r1Gurm59IuiEcbte3iPLE85tH1+56cO4dHpXjU5p7Sdgn7zk9T80ep3BJtZm/tTz/D/fD3Uj2k7aR1PK7Dvgv7aCe6zuT4Qx1bfVV6vnX7WPKanuk8MfX+XxWPvbyPkfuN72bj/XbDseTR03Ccy7dSvjPOLVF3up1uXe4+veVRL9+jtdy6SKf2Y+sk1tj2Mpx7dswbyThji9K6kz5l7vPXOn+0uJY3S9ZdGg/9uy3JSUtsW87jVh+Vu9+0jDX2l/lBH/Jthd/XlU3J1QfjsxXHGJfcWKtPyhCXR3oNN9ZPbq1J6jueP4X7+n32/+OPtUZVM++z3lXJsy6xtTaZw0g8t5wL5rDikcu9aW6WekznaDV9n7e5jCfxmU77ednnYlGqw9gm5Nnvg93npdcgHo+m1En6/Ft1HeN4NMrqa6RjMNxL+6WxcU5tf6TLpnllyjX2bm4Ot/KLLmvlJvJ4mY6HfsdhxSO3Hl+KB+rUtI90Hd56xnPtgJwx3Vg8atafcmO0Z9cp9+gVdUU86k1Zfy2959jruuyayM++EA9fiIcvxMOX/zbH/gHn8yTc
   </data>
  </layer>
  <layer name="Floor" width="100" height="100" visible="0">
@@ -138,48 +138,56 @@
    <properties>
     <property name="Destination" type="int" value="1"/>
     <property name="ID" type="int" value="1"/>
+    <property name="Speed" type="int" value="2"/>
    </properties>
   </object>
   <object id="165" name="Enemy1" gid="6" x="944" y="1392" width="16" height="16">
    <properties>
     <property name="Destination" type="int" value="5"/>
     <property name="ID" type="int" value="2"/>
+    <property name="Speed" type="int" value="2"/>
    </properties>
   </object>
   <object id="240" name="Enemy1" gid="6" x="1152" y="1424" width="16" height="16">
    <properties>
     <property name="Destination" type="int" value="14"/>
     <property name="ID" type="int" value="3"/>
+    <property name="Speed" type="int" value="2"/>
    </properties>
   </object>
   <object id="252" name="Enemy1" gid="6" x="1328" y="1168" width="16" height="16">
    <properties>
     <property name="Destination" type="int" value="32"/>
     <property name="ID" type="int" value="6"/>
+    <property name="Speed" type="int" value="3"/>
    </properties>
   </object>
   <object id="253" name="Enemy1" gid="6" x="1248" y="1184" width="16" height="16">
    <properties>
     <property name="Destination" type="int" value="24"/>
     <property name="ID" type="int" value="5"/>
+    <property name="Speed" type="int" value="3"/>
    </properties>
   </object>
   <object id="254" name="Enemy1" gid="6" x="1168" y="1168" width="16" height="16">
    <properties>
     <property name="Destination" type="int" value="16"/>
     <property name="ID" type="int" value="4"/>
+    <property name="Speed" type="int" value="3"/>
    </properties>
   </object>
   <object id="281" name="Enemy1" gid="6" x="880" y="1216" width="16" height="16">
    <properties>
     <property name="Destination" type="int" value="40"/>
     <property name="ID" type="int" value="7"/>
+    <property name="Speed" type="int" value="1"/>
    </properties>
   </object>
   <object id="282" name="Enemy1" gid="6" x="976" y="1120" width="16" height="16">
    <properties>
     <property name="Destination" type="int" value="52"/>
     <property name="ID" type="int" value="8"/>
+    <property name="Speed" type="int" value="0"/>
    </properties>
   </object>
  </objectgroup>
@@ -488,21 +496,21 @@
     <property name="PreviousID" type="int" value="42"/>
    </properties>
   </object>
-  <object id="288" name="Waypoint" gid="5" x="816" y="1104" width="16" height="16">
+  <object id="288" name="Waypoint" gid="5" x="816" y="944" width="16" height="16">
    <properties>
     <property name="ID" type="int" value="44"/>
     <property name="NextID" type="int" value="45"/>
     <property name="PreviousID" type="int" value="43"/>
    </properties>
   </object>
-  <object id="289" name="Waypoint" gid="5" x="832" y="1104" width="16" height="16">
+  <object id="289" name="Waypoint" gid="5" x="832" y="944" width="16" height="16">
    <properties>
     <property name="ID" type="int" value="45"/>
     <property name="NextID" type="int" value="46"/>
     <property name="PreviousID" type="int" value="44"/>
    </properties>
   </object>
-  <object id="290" name="Waypoint" gid="5" x="816" y="1104" width="16" height="16">
+  <object id="290" name="Waypoint" gid="5" x="816" y="944" width="16" height="16">
    <properties>
     <property name="ID" type="int" value="46"/>
     <property name="NextID" type="int" value="47"/>
@@ -728,7 +736,7 @@
     <property name="Passcode" value=""/>
    </properties>
   </object>
-  <object id="312" name="Door" gid="4" x="816" y="1232" width="16" height="16">
+  <object id="312" name="Door" gid="4" x="704" y="1392" width="16" height="16">
    <properties>
     <property name="ID" type="int" value="15"/>
     <property name="Open" type="bool" value="false"/>
@@ -736,7 +744,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Passcode">
+ <objectgroup name="Passcode" visible="0">
   <properties>
    <property name="Height" type="float" value="2"/>
   </properties>
@@ -759,7 +767,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Commands">
+ <objectgroup name="Commands" visible="0">
   <properties>
    <property name="Height" type="float" value="2"/>
   </properties>
@@ -778,13 +786,13 @@
     <property name="ID" type="int" value="2"/>
    </properties>
   </object>
-  <object id="314" name="Command" gid="21" x="864" y="1088" width="16" height="16" rotation="90">
+  <object id="314" name="Command" gid="21" x="864" y="928" width="16" height="16" rotation="90">
    <properties>
     <property name="ID" type="int" value="4"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Switch">
+ <objectgroup name="Switch" visible="0">
   <object id="163" name="Switch" gid="22" x="880" y="1456" width="16" height="16">
    <properties>
     <property name="DoorIDs" value="4"/>
@@ -815,7 +823,7 @@
     <property name="ID" type="int" value="5"/>
    </properties>
   </object>
-  <object id="315" name="Switch" gid="22" x="832" y="1088" width="16" height="16">
+  <object id="315" name="Switch" gid="22" x="832" y="928" width="16" height="16">
    <properties>
     <property name="DoorIDs" value="13, 14, 15"/>
     <property name="ID" type="int" value="6"/>
