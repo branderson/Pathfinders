@@ -3,6 +3,7 @@ using Assets.Monitor;
 using Assets.Utility;
 using Assets.VR;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Managers
 {
@@ -29,6 +30,7 @@ namespace Assets.Managers
         private static readonly Rect MonitorRect = new Rect(0, 0, .5f, 1);
         private static readonly Rect ScreenRect = new Rect(0, 0, 1, 1);
 
+        [SerializeField] private bool _debugMode = false;
         [SerializeField] private DisplayConfiguration _displayConfiguration = DisplayConfiguration.SingleMonitorToggle;
         [SerializeField] private InputConfiguration _inputConfiguration = InputConfiguration.NoGamepad;
         [SerializeField] private bool _alwaysUseFixedRotation = false;
@@ -37,7 +39,7 @@ namespace Assets.Managers
         [SerializeField] private VRPlayerController _vrPlayer;
         [SerializeField] private MonitorPlayerController _monitorPlayer;
         private SelectedPlayer _selectedPlayer = SelectedPlayer.VRPlayer;
-        private bool _secondDisplayActivated = false;
+        private static bool _secondDisplayActivated = false;
 
         protected DisplayManager() { }
 
@@ -47,31 +49,50 @@ namespace Assets.Managers
             MonitorPlayer
         }
 
+        private void Start()
+        {
+            SceneManager.sceneLoaded += LevelLoaded;
+            LevelLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+        }
+
+        private void LevelLoaded(Scene scene, LoadSceneMode mode)
+        {
+            if (_vrCamera == null) _vrCamera = GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<Camera>();
+            if (_monitorCamera == null) _monitorCamera = GameObject.FindGameObjectWithTag("MonitorPlayer").GetComponentInChildren<Camera>();
+            if (_vrPlayer == null) _vrPlayer = GameObject.FindGameObjectWithTag("VRPlayer").GetComponentInParent<VRPlayerController>();
+            if (_monitorPlayer == null) _monitorPlayer = GameObject.FindGameObjectWithTag("MonitorPlayer").GetComponent<MonitorPlayerController>();
+            UpdateInputConfiguration();
+            UpdateDisplayConfiguration();
+        }
+
         private void Update()
         {
             bool updateDisplayConfig = false;
             bool updateInputConfig = false;
 
-            // Bind F1 to cycle DisplayConfiguration
-            if (Input.GetKeyDown(KeyCode.F2))
+            if (_debugMode)
             {
-                // Enum hack to cycle through enum values
-                _displayConfiguration = (DisplayConfiguration)((int)++_displayConfiguration%4);
-                updateDisplayConfig = true;
-            }
-            // Bind F2 to cycle InputConfiguration
-            if (Input.GetKeyDown(KeyCode.F3))
-            {
-                // Enum hack to cycle through enum values
-                _inputConfiguration = (InputConfiguration)((int)++_inputConfiguration%2);
-                updateInputConfig = true;
-            }
-            // Bind F3 to cycle fixed rotation lock
-            if (Input.GetKeyDown(KeyCode.F4))
-            {
-                _alwaysUseFixedRotation = !_alwaysUseFixedRotation;
-                updateDisplayConfig = true;
-                updateInputConfig = true;
+                // Bind F1 to cycle DisplayConfiguration
+                if (Input.GetKeyDown(KeyCode.F2))
+                {
+                    // Enum hack to cycle through enum values
+                    _displayConfiguration = (DisplayConfiguration)((int)++_displayConfiguration%4);
+                    updateDisplayConfig = true;
+                }
+                // Bind F2 to cycle InputConfiguration
+                if (Input.GetKeyDown(KeyCode.F3))
+                {
+                    // Enum hack to cycle through enum values
+                    _inputConfiguration = (InputConfiguration)((int)++_inputConfiguration%2);
+                    updateInputConfig = true;
+                }
+                // Bind F3 to cycle fixed rotation lock
+                if (Input.GetKeyDown(KeyCode.F4))
+                {
+                    _alwaysUseFixedRotation = !_alwaysUseFixedRotation;
+                    updateDisplayConfig = true;
+                    updateInputConfig = true;
+                }
             }
 
             // Handle toggling selected character if in single monitor toggle or no gamepad

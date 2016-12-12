@@ -19,6 +19,8 @@ namespace Assets.VR
 	    private FadeController _fade;
 	    private FadeController _monitorFade;
 
+	    private bool _lockFade = false;
+
         // Development
 	    private bool _useKeyboardControls = false;
 	    private bool _allowControl = true;
@@ -148,6 +150,8 @@ namespace Assets.VR
 
 	    public void Win()
 	    {
+	        if (_lockFade) return;
+	        _lockFade = true;
 	        AllowControl = false;
             _fade.FadeOut(5, ReturnToMenu);
             _monitorFade.FadeOut(5);
@@ -155,6 +159,8 @@ namespace Assets.VR
 
 	    public void Die()
 	    {
+	        if (_lockFade) return;
+	        _lockFade = true;
 	        AllowControl = false;
             _fade.FadeOut(2.5f, ReturnToMenu);
             _monitorFade.FadeOut(2.5f);
@@ -162,12 +168,16 @@ namespace Assets.VR
 
 	    public void StartGame()
 	    {
+	        if (_lockFade) return;
+	        _lockFade = true;
             _fade.FadeOut(2.5f, GoToGame);
             _monitorFade.FadeOut(2.5f);
 	    }
 
 	    public void QuitGame()
 	    {
+	        if (_lockFade) return;
+	        _lockFade = true;
             _fade.FadeOut(2.5f, ReturnToMenu);
             _monitorFade.FadeOut(2.5f);
 	    }

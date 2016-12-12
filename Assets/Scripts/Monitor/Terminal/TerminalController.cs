@@ -66,6 +66,14 @@ namespace Assets.Monitor.Terminal
 
         public void Start()
         {
+            if (_scripts == null)
+            {
+                _scripts = new List<string>();
+            }
+            if (_passcodes == null)
+            {
+                _passcodes = new Dictionary<int, string>();
+            }
             _audio = GetComponent<AudioSource>();
             _text = _screen.Text;
             _typeString = null;
