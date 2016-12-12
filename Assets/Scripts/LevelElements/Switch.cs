@@ -34,6 +34,7 @@ namespace Assets.LevelElements
 
         public void Toggle()
         {
+            if (_on) return;
             foreach (int id in DoorIDs)
             {
                 DoorManager.Instance.GetDoor(id).Toggle();

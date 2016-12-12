@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="323">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="325">
  <tileset firstgid="1" name="Tilesheet" tilewidth="16" tileheight="16" tilecount="256" columns="16">
   <image source="../Sprites/Tilesheet.png" width="256" height="256"/>
   <tile id="0">
@@ -117,7 +117,7 @@
    <property name="Static" value="true"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt2lFygjAQgOHYG7Q3aW9Qb6A3kBvI/R9qWnYmrpsQkMgW/m+GQUqGSpZkk2AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAs8/b9nbbvtb+IviNxXH4/B2IydoOa38B3JF4SJ91LJRFewe1x7qIhy/Ewxfi4Qvx8IV4+EI8fNHxkHnI2MY8vg0dj9p2QntqQ+r1Gurm59IuiEcbte3iPLE85tH1+56cO4dHpXjU5p7Sdgn7zk9T80ep3BJtZm/tTz/D/fD3Uj2k7aR1PK7Dvgv7aCe6zuT4Qx1bfVV6vnX7WPKanuk8MfX+XxWPvbyPkfuN72bj/XbDseTR03Ccy7dSvjPOLVF3up1uXe4+veVRL9+jtdy6SKf2Y+sk1tj2Mpx7dswbyThji9K6kz5l7vPXOn+0uJY3S9ZdGg/9uy3JSUtsW87jVh+Vu9+0jDX2l/lBH/Jthd/XlU3J1QfjsxXHGJfcWKtPyhCXR3oNN9ZPbq1J6jueP4X7+n32/+OPtUZVM++z3lXJsy6xtTaZw0g8t5wL5rDikcu9aW6WekznaDV9n7e5jCfxmU77ednnYlGqw9gm5Nnvg93npdcgHo+m1En6/Ft1HeN4NMrqa6RjMNxL+6WxcU5tf6TLpnllyjX2bm4Ot/KLLmvlJvJ4mY6HfsdhxSO3Hl+KB+rUtI90Hd56xnPtgJwx3Vg8atafcmO0Z9cp9+gVdUU86k1Zfy2959jruuyayM++EA9fiIcvxMOX/zbH/gHn8yTc
+   eJzt2lFygyAQgGHSG6Q3aW/Q3CC5QbxBvf9DQ+vOkM2CYDRu9f9mHGOltrLCAiYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg2cdte7ttn2v/I/iNxWn4/BWIydoOI8d4Lal/6bNOhbJY3kHtsS7i4Qvx8IV4+EI8fCEevhAPX3Q8ZB4ytjGPX4aOR207oT0tQ+r1O9TNz4/q9zCv2nZxaSyPaXT9HpNzl/CoFI/a3FParmHf+ak1f5TKzdFm9tb+9DPcDz8v1UPaTpaOx/ew78I+2knufce7Orb6qvT80u1jzmt6pvNE6/2/Kh57eR8j9xvfzcb77YZjyaPn4TiXb6V8Z5ybo+50O9263H16y6Ne/o+l5dZFOrUfWyexxrbX4dyzY95IxhlblNad9ClTn7+l88cS1/JmzrpL46G/tyU5aY5ty3nc6qNy95uWscb+Mj/oQ76t8P26spZcfTA+W3GMccmNtfqkDHF5pNdwY/3k1pqkvuP5c7iv32f/Pv5Ya1Q18z7rXZU86xJba5M5jMRzy7lgCiseudyb5mapx3SOVtP3eZvLeBKf6bSfl30uFqU6jG1Cnv0+2H1eeg3i8ailTtLn36rrGMeTUVZfIx2D4V7aL42Nc2r7I102zSst19i7qTncyi+6rJWbyONlOh76HYcVj9x6fCkeqFPTPtJ1eOsZz7UDcka7sXjUrD/lxmjPrlPu0SvqinjUa1l/Lb3n2Ou67JrIz74QD1+Ihy/Ew5f/Nsf+AQn4JLw=
   </data>
  </layer>
  <layer name="Floor" width="100" height="100" visible="0">
@@ -626,7 +626,7 @@
  <objectgroup name="Doors">
   <object id="150" name="Door" gid="4" x="736" y="1392" width="16" height="16">
    <properties>
-    <property name="ID" type="int" value="16"/>
+    <property name="ID" type="int" value="17"/>
     <property name="Open" type="bool" value="false"/>
     <property name="Passcode" value="icecream"/>
    </properties>
@@ -738,13 +738,20 @@
   </object>
   <object id="312" name="Door" gid="4" x="704" y="1392" width="16" height="16">
    <properties>
+    <property name="ID" type="int" value="16"/>
+    <property name="Open" type="bool" value="false"/>
+    <property name="Passcode" value=""/>
+   </properties>
+  </object>
+  <object id="323" name="Door" gid="4" x="816" y="1232" width="16" height="16">
+   <properties>
     <property name="ID" type="int" value="15"/>
     <property name="Open" type="bool" value="false"/>
     <property name="Passcode" value=""/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Passcode" visible="0">
+ <objectgroup name="Passcode">
   <properties>
    <property name="Height" type="float" value="2"/>
   </properties>
@@ -763,11 +770,11 @@
   <object id="313" name="Passcode" gid="20" x="800" y="1200" width="16" height="16" rotation="90">
    <properties>
     <property name="Code" value="icecream"/>
-    <property name="ID" type="int" value="16"/>
+    <property name="ID" type="int" value="17"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Commands" visible="0">
+ <objectgroup name="Commands">
   <properties>
    <property name="Height" type="float" value="2"/>
   </properties>
@@ -792,7 +799,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Switch" visible="0">
+ <objectgroup name="Switch">
   <object id="163" name="Switch" gid="22" x="880" y="1456" width="16" height="16">
    <properties>
     <property name="DoorIDs" value="4"/>
@@ -825,9 +832,12 @@
   </object>
   <object id="315" name="Switch" gid="22" x="832" y="928" width="16" height="16">
    <properties>
-    <property name="DoorIDs" value="13, 14, 15"/>
+    <property name="DoorIDs" value="13, 14, 15, 16"/>
     <property name="ID" type="int" value="6"/>
    </properties>
   </object>
+ </objectgroup>
+ <objectgroup name="Winpoint">
+  <object id="324" name="Winpoint" gid="5" x="736" y="1344" width="16" height="16"/>
  </objectgroup>
 </map>

@@ -21,7 +21,11 @@ namespace Assets.LevelElements
             }
             else
             {
-                _textMesh.text = GetComponentInParent<LoadedText>().Text;
+                LoadedText loaded = GetComponentInParent<LoadedText>();
+                if (loaded)
+                {
+                    _textMesh.text = loaded.Text;
+                }
             }
         }
 

@@ -135,6 +135,11 @@ namespace Assets.VR
 	        }
 	    }
 
+	    public void Win()
+	    {
+            Debug.Log("Player won!");
+	    }
+
 	    public void Die()
 	    {
             Debug.Log("Player died");
