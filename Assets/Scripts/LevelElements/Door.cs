@@ -14,7 +14,7 @@ namespace Assets.LevelElements
         [SerializeField] private bool _open = false;
         [SerializeField] private bool _switchControlled = false;
 
-        private Collider _collider;
+        private LoadedText _text;
 
         public int ID
         {
@@ -35,6 +35,11 @@ namespace Assets.LevelElements
         public bool SwitchControlled
         {
             set { _switchControlled = value; }
+        }
+
+        private void Awake()
+        {
+            _text = GetComponent<LoadedText>();
         }
 
         public void Start()
@@ -74,6 +79,7 @@ namespace Assets.LevelElements
                 // Unlock
                 EventManager.Instance.StartListening("OpenDoor" + _id, OpenDoor);
                 EventManager.Instance.StartListening("CloseDoor" + _id, CloseDoor);
+                _text.Text = "Door " + _id;
             }
             StateOpen();
         }
@@ -85,6 +91,7 @@ namespace Assets.LevelElements
                 // Unlock
                 EventManager.Instance.StartListening("OpenDoor" + _id, OpenDoor);
                 EventManager.Instance.StartListening("CloseDoor" + _id, CloseDoor);
+                _text.Text = "Door " + _id;
             }
             StateClose();
         }

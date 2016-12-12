@@ -75,7 +75,8 @@ GameObject:
   - component: {fileID: 23267332230601836}
   - component: {fileID: 102439746433032832}
   - component: {fileID: 114423667465006924}
-  m_Layer: 0
+  - component: {fileID: 114335072452882396}
+  m_Layer: 10
   m_Name: TextDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,13 +102,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071726468070410}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4717218554860534}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &4717218554860534
 Transform:
   m_ObjectHideFlags: 1
@@ -181,7 +182,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ae09dd0f211a20144b6ee4a4aa41b238, type: 2}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -205,7 +206,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071726468070410}
-  m_Mesh: {fileID: 4300000, guid: 839d63b527ad6614e9d26bde7e69343a, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 77effeabd8b9d564aa3b0ca52d28aea7, type: 3}
 --- !u!54 &54433693425771116
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -253,6 +254,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d71f4bb63bc424f9dac2d9ff89b680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114335072452882396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876918712171016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c386932d1309934ca07e384f7e87635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: MonitorPlayer
 --- !u!114 &114423667465006924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,7 +303,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135848187913409774
 SphereCollider:

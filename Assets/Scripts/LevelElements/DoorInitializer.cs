@@ -9,6 +9,7 @@ namespace Assets.LevelElements
         public void HandleInstanceProperties()
         {
             Door door = GetComponent<Door>();
+            LoadedText comp = GetComponent<LoadedText>();
             TiledLoaderProperties properties = GetComponent<TiledLoaderProperties>();
             int id;
             bool open;
@@ -20,6 +21,14 @@ namespace Assets.LevelElements
             door.ID = id;
             door.Open = open;
             door.Passcode = passcode;
+            if (passcode == "")
+            {
+                comp.Text = "Door " + id;
+            }
+            else
+            {
+                comp.Text = "[Locked] Door " + id;
+            }
             DestroyImmediate(this);
         }
     }
