@@ -9,18 +9,25 @@ namespace Assets.LevelElements
         [SerializeField] private bool useID = true;
 
         private IAddressable _addressable;
+        private TextMesh _textMesh;
 
         private void Awake()
         {
+            _textMesh = GetComponent<TextMesh>();
             _addressable = GetComponentInParent<IAddressable>();
             if (useID)
             {
-                gameObject.GetComponent<TextMesh>().text = _name + " " + _addressable.ID;
+                _textMesh.text = _name + " " + _addressable.ID;
             }
             else
             {
-                gameObject.GetComponent<TextMesh>().text = GetComponentInParent<LoadedText>().Text;
+                _textMesh.text = GetComponentInParent<LoadedText>().Text;
             }
+        }
+
+        public void SetText(string text)
+        {
+            _textMesh.text = text;
         }
 
         private void Update()

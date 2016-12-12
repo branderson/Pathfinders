@@ -15,6 +15,7 @@ namespace Assets.LevelElements
         [SerializeField] private bool _switchControlled = false;
 
         private LoadedText _text;
+        private FloatingID _floatingID;
 
         public int ID
         {
@@ -34,12 +35,20 @@ namespace Assets.LevelElements
 
         public bool SwitchControlled
         {
-            set { _switchControlled = value; }
+            set
+            {
+                _switchControlled = value;
+                if (value)
+                {
+                    _floatingID.SetText("[Switch] Door " + _id);
+                }
+            }
         }
 
         private void Awake()
         {
             _text = GetComponent<LoadedText>();
+            _floatingID = GetComponentInChildren<FloatingID>();
         }
 
         public void Start()
@@ -79,7 +88,7 @@ namespace Assets.LevelElements
                 // Unlock
                 EventManager.Instance.StartListening("OpenDoor" + _id, OpenDoor);
                 EventManager.Instance.StartListening("CloseDoor" + _id, CloseDoor);
-                _text.Text = "Door " + _id;
+                _floatingID.SetText("Door " + _id);
             }
             StateOpen();
         }
@@ -91,7 +100,7 @@ namespace Assets.LevelElements
                 // Unlock
                 EventManager.Instance.StartListening("OpenDoor" + _id, OpenDoor);
                 EventManager.Instance.StartListening("CloseDoor" + _id, CloseDoor);
-                _text.Text = "Door " + _id;
+                _floatingID.SetText("Door " + _id);
             }
             StateClose();
         }

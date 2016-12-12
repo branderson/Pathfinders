@@ -9,11 +9,11 @@ namespace Assets.Enemies
     public class EnemyAI : CustomMonoBehaviour, IAddressable
     {
         [SerializeField] private int _id;
+        [SerializeField] private float move_speed = 1.5f;        // The walking speed between waypoints
         public int Destination;
 
         private Waypoint _destination;            // Current waypoint
 
-        public float move_speed = 1.5f;        // The walking speed between waypoints
         bool forward = true;            // direction
         double turn = 6.0;                // Turn speed
 //        float pause_time = 0;        // Pause at waypoint
@@ -32,6 +32,22 @@ namespace Assets.Enemies
             ReachedWaypoint();
         }
 
+        public void SetSpeed(long speed)
+        {
+            switch (speed)
+            {
+                case 1:
+                    move_speed = .5f;
+                    break;
+                case 2:
+                    move_speed = 1.5f;
+                    break;
+                case 3:
+                    move_speed = 3f;
+                    break;
+            }
+        }
+
         public int ID
         {
             get { return _id; }
@@ -45,7 +61,8 @@ namespace Assets.Enemies
 
             EventManager.Instance.StartListening("Pause", Pause);
             EventManager.Instance.StartListening("Unpause", Unpause);
-            EventManager.Instance.StartListening("Reverse", Reverse);
+            EventManager.Instance.StartListening("Reverse" + _id, Reverse);
+            EventManager.Instance.StartListening("EnemySpeed" + _id, SetSpeed);
         }
 
         private void Update()

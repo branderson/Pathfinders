@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Assets.Monitor.Terminal;
 using Assets.Utility;
 using Assets.Utility.Static;
 using Assets.VR;
@@ -13,6 +14,7 @@ namespace Assets.Monitor
 	    [SerializeField] private float _minimumHeight = 5f;
 	    [SerializeField] private float _maximumHeight = 25f;
 	    [SerializeField] private bool _canEnable = true;
+	    [SerializeField] private TerminalController _terminal;
 	    private bool _allowControl = true;
 
 	    private Rigidbody _rigidbody;
@@ -41,6 +43,16 @@ namespace Assets.Monitor
                     _mouseLook.enabled = false;
                 }
             }
+	    }
+
+	    public void AddPasscode(int id, string code)
+	    {
+            _terminal.AddPasscode(id, code);
+	    }
+
+	    public void AddScriptInfo(string text)
+	    {
+	        _terminal.AddScriptInfo(text);
 	    }
 
 	    private void Awake()

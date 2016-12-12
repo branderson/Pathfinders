@@ -104,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 1071726468070410}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4717218554860534}
   m_RootOrder: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 0
   Destination: 0
-  move_speed: 1.5
+  move_speed: 3
 --- !u!135 &135457195736593754
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -303,7 +303,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135848187913409774
 SphereCollider:
@@ -315,7 +315,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143230905654248206
 CharacterController:

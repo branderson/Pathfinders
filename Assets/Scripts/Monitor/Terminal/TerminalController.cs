@@ -38,8 +38,21 @@ namespace Assets.Monitor.Terminal
         private int _lineChars;             // Number of characters typed this line
         private int _lines;                 // Number of lines typed this page
 
+        private List<string> _scripts;
+        private Dictionary<int, string> _passcodes; 
+
         // Special decipher states
         private int _knockKnock;
+
+        public void AddScriptInfo(string text)
+        {
+            _scripts.Add(text);
+        }
+
+        public void AddPasscode(int id, string code)
+        {
+            _passcodes[id] = code;
+        }
 
         public void Start()
         {
@@ -54,6 +67,12 @@ namespace Assets.Monitor.Terminal
 
             _knockKnock = 0;
             _text.text = _promptString;
+
+            _scripts = new List<string>();
+            _passcodes = new Dictionary<int, string>();
+
+            TypeString("Type \"passcodes\" to list all learned door codes.\n" +
+                       "Type \"man\" to list all learned commands and their usages.\n", false);
         }
 
         public void Update()
@@ -322,7 +341,7 @@ namespace Assets.Monitor.Terminal
         private void DecipherString(string str)
         {
             List<string> words = str.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries).ToList();
-            if (words.Count <= 2) return;
+            if (words.Count < 1) return;
 
             // Get opcode
             string opcode = words[0];
@@ -335,12 +354,15 @@ namespace Assets.Monitor.Terminal
             {
                 Debug.Log("Parsed option: " + option);
             }
-            string target = words.Last();
-            if (target.StartsWith("-"))
+            string target = words.LastOrDefault();
+            if (target == null || target.StartsWith("-"))
             {
-                return;
+                target = "";
             }
-            words.Remove(target);
+            else
+            {
+                words.Remove(target);
+            }
             Debug.Log("Parsed target: " + target);
 
             // Get option values
@@ -364,8 +386,23 @@ namespace Assets.Monitor.Terminal
             }
 
             // Parse command
+            string output = "";
             switch (opcode)
             {
+                case "passcodes":
+                    foreach (int id in _passcodes.Keys.OrderByDescending(item => item))
+                    {
+                        output += "Door " + id + ": " + _passcodes[id] + "\n";
+                    }
+                    TypeString(output, false);
+                    break;
+                case "man":
+                    foreach (string command in _scripts.OrderBy(item => item))
+                    {
+                        output += command + "\n";
+                    }
+                    TypeString(output, false);
+                    break;
                 case "door":
                     // Look for and retrieve passcode
                     string passcode = "";
@@ -389,6 +426,30 @@ namespace Assets.Monitor.Terminal
                     }
                     break;
                 case "enemy":
+                    string speed = "";
+                    bool handleSpeed = false;
+                    if (options.Contains("-s"))
+                    {
+                        speed = vals["-s"];
+                        handleSpeed = true;
+                    }
+                    else if (options.Contains("--speed"))
+                    {
+                        speed = vals["--speed"];
+                        handleSpeed = true;
+                    }
+                    if (handleSpeed)
+                    {
+                        long speedVal = long.Parse(speed);
+                        if (speedVal > 0 && speedVal < 4)
+                        {
+                            EventManager.Instance.TriggerEvent("EnemySpeed" + target, speedVal);
+                        }
+                    }
+                    if (options.Any(item => item == "-r" || item == "--reverse"))
+                    {
+                        EventManager.Instance.TriggerEvent("Reverse" + target);
+                    }
                     break;
                 default:
                     Debug.Log("Unrecognized command");
