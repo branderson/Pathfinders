@@ -1,6 +1,7 @@
 using UnityEngine;
 using Assets.Utility;
 using Assets.Utility.Static;
+using UnityEngine.SceneManagement;
 
 namespace Assets.VR
 {
@@ -15,6 +16,8 @@ namespace Assets.VR
 	    private CharacterController _controller;
 	    private SmoothMouseLook _mouseLook;
 	    private FixedIncrementLook _fixedLook;
+	    private FadeController _fade;
+	    private FadeController _monitorFade;
 
         // Development
 	    private bool _useKeyboardControls = false;
@@ -81,6 +84,14 @@ namespace Assets.VR
 	        _controller = GetComponent<CharacterController>();
 	        _mouseLook = GetComponentInChildren<SmoothMouseLook>();
 	        _fixedLook = GetComponent<FixedIncrementLook>();
+	        _fade = GetComponentInChildren<FadeController>();
+	    }
+
+	    private void Start()
+	    {
+	        _fade.FadeIn(2.5f);
+	        _monitorFade = GameObject.FindGameObjectWithTag("MonitorPlayer").GetComponentInChildren<FadeController>();
+	        _monitorFade.FadeIn(2.5f);
 	    }
 
 	    private void Update()
@@ -137,12 +148,38 @@ namespace Assets.VR
 
 	    public void Win()
 	    {
-            Debug.Log("Player won!");
+	        AllowControl = false;
+            _fade.FadeOut(5, ReturnToMenu);
+            _monitorFade.FadeOut(5);
 	    }
 
 	    public void Die()
 	    {
-            Debug.Log("Player died");
+	        AllowControl = false;
+            _fade.FadeOut(2.5f, ReturnToMenu);
+            _monitorFade.FadeOut(2.5f);
+	    }
+
+	    public void StartGame()
+	    {
+            _fade.FadeOut(2.5f, GoToGame);
+            _monitorFade.FadeOut(2.5f);
+	    }
+
+	    public void QuitGame()
+	    {
+            _fade.FadeOut(2.5f, ReturnToMenu);
+            _monitorFade.FadeOut(2.5f);
+	    }
+
+	    private void GoToGame()
+	    {
+	        SceneManager.LoadScene("GameScene");
+	    }
+
+	    private void ReturnToMenu()
+	    {
+	        SceneManager.LoadScene("MenuScene");
 	    }
 	}
 } 

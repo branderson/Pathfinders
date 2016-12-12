@@ -14,7 +14,6 @@ namespace Assets.LevelElements
         [SerializeField] private bool _open = false;
         [SerializeField] private bool _switchControlled = false;
 
-        private LoadedText _text;
         private FloatingID _floatingID;
 
         public int ID
@@ -47,7 +46,6 @@ namespace Assets.LevelElements
 
         private void Awake()
         {
-            _text = GetComponent<LoadedText>();
             _floatingID = GetComponentInChildren<FloatingID>();
         }
 

@@ -117,6 +117,11 @@ namespace Assets.Monitor
             _pauseMenu.Close();
         }
 
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
+
         public void GoToScene(string scene)
         {
             SceneManager.LoadScene(scene);
