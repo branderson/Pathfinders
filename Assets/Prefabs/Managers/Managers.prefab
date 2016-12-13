@@ -68,9 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debugMode: 0
-  _displayConfiguration: 1
+  _displayConfiguration: 0
   _inputConfiguration: 0
-  _alwaysUseFixedRotation: 0
+  _alwaysUseFixedRotation: 1
   _vrCamera: {fileID: 0}
   _monitorCamera: {fileID: 0}
   _vrPlayer: {fileID: 0}
