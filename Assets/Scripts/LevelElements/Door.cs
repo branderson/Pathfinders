@@ -15,6 +15,7 @@ namespace Assets.LevelElements
         [SerializeField] private bool _switchControlled = false;
 
         private FloatingID _floatingID;
+        private AudioSource _source;
 
         public int ID
         {
@@ -47,6 +48,7 @@ namespace Assets.LevelElements
         private void Awake()
         {
             _floatingID = GetComponentInChildren<FloatingID>();
+            _source = GetComponent<AudioSource>();
         }
 
         public void Start()
@@ -88,6 +90,7 @@ namespace Assets.LevelElements
                 EventManager.Instance.StartListening("CloseDoor" + _id, CloseDoor);
                 _floatingID.SetText("Door " + _id);
             }
+            _source.Play();
             StateOpen();
         }
 
@@ -100,6 +103,7 @@ namespace Assets.LevelElements
                 EventManager.Instance.StartListening("CloseDoor" + _id, CloseDoor);
                 _floatingID.SetText("Door " + _id);
             }
+            _source.Play();
             StateClose();
         }
 

@@ -10,6 +10,7 @@ namespace Assets.LevelElements
         [SerializeField] private int _id;
         public List<int> DoorIDs = new List<int>();
 
+        private AudioSource _source;
         private MeshRenderer _renderer;
         private bool _on = false;
 
@@ -22,6 +23,7 @@ namespace Assets.LevelElements
         private void Awake()
         {
             _renderer = GetComponentInChildren<MeshRenderer>();
+            _source = GetComponent<AudioSource>();
         }
 
         private void Start()
@@ -35,6 +37,7 @@ namespace Assets.LevelElements
         public void Toggle()
         {
             if (_on) return;
+            _source.Play();
             foreach (int id in DoorIDs)
             {
                 DoorManager.Instance.GetDoor(id).Toggle();
