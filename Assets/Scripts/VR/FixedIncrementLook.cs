@@ -38,12 +38,12 @@ namespace Assets.VR
 
         private void RotateRight()
         {
-            transform.Rotate(transform.up, 90, Space.World);
+            transform.Rotate(transform.up, 30, Space.World);
         }
 
         private void RotateLeft()
         {
-            transform.Rotate(transform.up, -90, Space.World);
+            transform.Rotate(transform.up, -30, Space.World);
         }
     }
 }
